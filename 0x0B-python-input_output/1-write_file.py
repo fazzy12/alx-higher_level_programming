@@ -1,4 +1,4 @@
-#!/usr/bin/python3
+1-write_file.pyon3
 # 1-number_of_lines.py
 # ifeanyi kalu
 """Defines a text file line-counting function."""
