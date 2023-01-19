@@ -12,11 +12,11 @@ request(url, (error, response, body) => {
           const characterData = JSON.parse(body);
           console.log(characterData.name);
         } else {
-          console.log("Error: Could not retrieve character information.");
+          console.log('Error: Could not retrieve character information.');
         }
       });
     });
   } else {
-    console.log("Error: Could not retrieve movie information.");
+    console.log('Error: Could not retrieve movie information.');
   }
 });
