@@ -1,6 +1,19 @@
 #!/usr/bin/node
-const request = require('request');
-const url = 'http://swapi.co/api/films/' + process.argv[2];
-request(url, function (error, response, body) {
-  console.log(error || JSON.parse(body).title);
-});
+const movieId = process.argv[2];
+const url = `https://swapi-api.alx-tools.com/api/films/${movieId}`;
+
+fetch(url)
+  .then(response => {
+    if (response.ok) {
+      return response.json();
+    } else {
+      throw new Error("Error: Could not retrieve movie information.");
+    }
+  })
+  .then(data => {
+    console.log(data.title);
+  })
+  .catch(error => {
+    console.log(error);
+  });
+
