@@ -10,4 +10,3 @@ fs.readFile(filepath, 'utf-8', (err, data) => {
     console.log(data);
   }
 });
-
