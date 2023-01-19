@@ -25,9 +25,9 @@ request(url, (error, response, body) => {
         });
       })
       .catch(error => {
-        console.log("Error: Could not retrieve character information.");
+        console.log('Error: Could not retrieve character information.');
       });
   } else {
-    console.log("Error: Could not retrieve movie information.");
+    console.log('Error: Could not retrieve movie information.');
   }
 });
