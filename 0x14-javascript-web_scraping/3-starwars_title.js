@@ -8,8 +8,6 @@ request(url, (error, response, body) => {
     const data = JSON.parse(body);
     console.log(data.title);
   } else {
-    console.log("Error: Could not retrieve movie information.");
+    console.log('Error: Could not retrieve movie information.');
   }
 });
-
-
