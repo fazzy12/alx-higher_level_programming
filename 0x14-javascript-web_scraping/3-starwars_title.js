@@ -7,7 +7,7 @@ fetch(url)
     if (response.ok) {
       return response.json();
     } else {
-      throw new Error("Error: Could not retrieve movie information.");
+      throw new Error('Error: Could not retrieve movie information.');
     }
   })
   .then(data => {
@@ -16,4 +16,3 @@ fetch(url)
   .catch(error => {
     console.log(error);
   });
-
