@@ -1,31 +1,75 @@
-# Higher-level programming - Python, Databases & JavaScript
+# Higher-level Programming - Python, Databases & JavaScript
 
-This repository contains programs written for the higher-level programming track at Holberton School. In these projects, which began occurring in month four of the year one curriculum, I learned Python, MySQL and JavaScript. Simultaneously, I continued to reinforce and expand my skills in C and shell scripting. The specific list of projects contained follows:
+## introduction
+Welcome to the Higher-level Programming repository! This repository contains a collection of programs and projects completed during 
+the higher-level programming track at Holberton School. Throughout these projects, I've gained proficiency in Python, MySQL, and JavaScript. 
+Additionally, I continued to reinforce and expand my skills in C and shell scripting. Below is a list of the specific projects contained in this repository:
 
-0x00. Python - Hello, World
-0x01. Python - if/else, loops, functions
-0x02. Python - import & modules
-0x03. Python - Data Structures: Lists, Tuples
-0x04. Python - More Data Structures: Set, Dictionary
-0x05. Python - Exceptions
-0x06. Python - Classes and Objects
-0x07. Python - Test-driven development
-0x08. Python - More Classes and Objects
-0x09. Python - Everything is object
-0x0A. Python - Inheritance
-0x0B. Python - Input/Output
-0x0C. Python - Almost a circle
-0x0D. SQL - Introduction
-0x0E. SQL - More queries
-0x0F. Python - Object-relational mapping
-0x10. Python - Network #0
-0x11. Python - Network #1
-0x12. Javascript - Warm up
-0x13. Javascript - Objects, Scopes and Closures
-0x14. Javascript - Web scraping
-0x15. Javascript - Web JQuery
+## Projects
 
-## Author 
- ifeanyi kalu
- 
- 
+
+0. [0x00. Python - Hello, World]()
+* Introduction to Python, printing, and basic syntax.
+
+1. [0x01. Python - if/else, loops, functions]()
+* Working with conditional statements, loops, and functions in Python.
+
+2. [0x02. Python - import & modules]()
+* Understanding import statements and working with Python modules.
+
+3. [0x03. Python - Data Structures: Lists, Tuples]()
+* Exploring Python lists and tuples as data structures.
+
+4. [0x04. Python - More Data Structures: Set, Dictionary]()
+* Working with sets and dictionaries in Python.
+
+5. [50x05. Python - Exceptions]()
+* Handling exceptions and errors in Python.
+
+6. [0x06. Python - Classes and Objects]()
+* [Introduction to classes and objects in Python.
+
+7. [0x07. Python - Test-driven development]()
+* Learning about test-driven development (TDD) in Python.
+
+8. [0x08. Python - More Classes and Objects]()
+* Further exploration of classes, objects, and OOP concepts in Python.
+
+9. [0x09. Python - Everything is an object]()
+* Understanding Python objects and their behavior.
+
+10. [0x0A. Python - Inheritance]()
+* Implementing inheritance and understanding its use in Python.
+
+11. [0x0B. Python - Input/Output]()
+* Working with file input/output in Python.
+
+12. [0x0C. Python - Almost a circle]()
+* A comprehensive project on Python classes and inheritance to create a framework for rectangles and circles.
+
+13. [0x0D. SQL - Introduction]()
+* Introduction to SQL and database management.
+
+14. [0x0E. SQL - More queries]()
+* Advanced SQL queries and database manipulation.
+
+15. [150x0F. Python - Object-relational mapping]()
+* Working with Object-Relational Mapping (ORM) and databases in Python.
+
+16. [0x10. Python - Network #0]()
+* Introduction to networking concepts and making HTTP requests with Python.
+
+17. [0x11. Python - Network #1]()
+* Building on networking knowledge with more advanced requests and handling responses.
+
+18. [0x12. JavaScript - Warm up]()
+* Getting started with JavaScript and basic syntax.
+
+19. [0x13. JavaScript - Objects, Scopes and closures]()
+* Understanding JavaScript objects, scopes, and closures.
+
+20. [0x14. JavaScript - Web scraping]()
+* Web scraping using JavaScript and libraries like Puppeteer.
+
+21. [0x15. JavaScript - Web JQuery]()
+* Introduction to jQuery and using it for web development.
