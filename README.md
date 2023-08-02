@@ -90,8 +90,9 @@ git clone https://github.com/your-username/alx-higher_level_programming.git
 cd alx-higher_level_programming/project-folder
 ```
 ## Run the project
+```
 python main.py
-
+```
 ## Contributing
 Explain how others can contribute to this repository. Include guidelines for submitting bug reports, suggesting enhancements,
 or contributing code. Mention any code formatting or testing standards that contributors should follow. 
