@@ -1,96 +1,94 @@
-# Python - Hello, World
+# 0x00. Python - Hello, World
+This repository contains a series of Python scripts that cover various topics related to the basics of Python programming.
+Each script is designed to demonstrate a specific concept or solve a particular problem.
 
-In this project, I began practicing using the interpreter, printing text
-and variables, and indexing and slicing strings in Python.
+1. [Run Python file]()
+* A Shell script (0-run) that runs a Python script specified in the environment variable $PYFILE. The Python script prints "Best School" when executed.
 
-## Tests :heavy_check_mark:
+2. [Run inline]()
+* A Shell script (1-run_inline) that runs Python code specified in the environment variable $PYCODE. The Python code prints "Best School: 98" when executed.
 
-* [tests](./tests): Folder of test files. Provided by Holberton School.
+3. [Hello, print]()
+* A Python script (2-print.py) that uses the print function to display the message "Programming is like building a multilingual puzzle" followed by a new line.
 
-## Function Prototypes :floppy_disk:
+4. [Print integer]()
+* A Python script (3-print_number.py) that prints the integer stored in the variable number followed by the string 
+  "Battery street" and a new line. The variable number is not cast into a string, and f-strings are used.
 
-Prototypes for functions written in this project:
+5. [Print float]()
+* A Python script (4-print_float.py) that prints the float stored in the variable number with a precision of 2 digits. F-strings are used, and the variable number is not cast into a string.
 
-| File                       | Prototype                             |
-| -------------------------- | ------------------------------------- |
-| `10-check_cycle.c`         | `int check_cycle(listint_t *list);`   |
-| `102-magic_calculation.py` | `def magic_calculation(a, b):`        |
+6. [Print string]()
+* A Python script (5-print_string.py) that prints the value of the variable str three times, followed by a new line, 
+  and then prints the first 9 characters of the variable str, followed by a new line. No loops or conditional statements are used.
 
-## Tasks :page_with_curl:
+7. [Play with strings]()
+* A Python script (7-edges.py) that manipulates the variable word to extract substrings word_first_3, word_last_2, and middle_word based on specific conditions.
 
-* **0. Run Python File**
-  * [0-run](./0-run): Bash script that runs a Python script file saved
-  in the environment variable `$PYFILE`.
+8. [Create a new sentence]()
+* A Python script (8-concat_edges.py) that prints "object-oriented programming with Python" followed by a new line, using the variables str1, str2, and the slicing technique.
 
-* **1. Run inline**
-  * [1-run_inline](./1-run_inline): Bash script that runs Python code saved in the
-  environment variable `$PYCODE`.
+9. [Easter Egg]()
+* A Python script (9-easter_egg.py) that prints "The Zen of Python" by Tim Peters, which is a collection of guiding principles for writing computer programs in Python.
 
-* **2. Hello, print**
-  * [2-print.py](./2-print.py): Python script that prints exactly `"Programming is
-  like building a multilingual puzzle`, followed by a new line using the function `print`.
+10. [Linked list cycle]()
+* A C function (10-check_cycle.c) that checks if a singly linked list has a cycle. The function returns 1 if there
+  is a cycle and 0 if there is no cycle. The function uses pointers and does not require loops or conditional statements.
 
-* **3. Print integer**
-  * [3-print_number.py](./3-print_number.py): Python script that prints the integer stored
-  in the variable `number`, followed by `Battery street`, followed by a new line.
-  * Completion of [this source code](https://github.com/holbertonschool/0x00.py/blob/master/3-print_number.py).
+11. [Hello, write]()
+* A Python script (100-write.py) that prints "and that piece of art is useful - Dora Korpar, 2015-10-19" to the standard error output (stderr) and exits with a status code of 1.
 
-* **4. Print float**
-  * [4-print_float.py](./4-print_float.py): Python script that prints the float stored
-  in the variable `number` with a precision of two digits.
-  * Completion of [this source code](https://github.com/holbertonschool/0x00.py/blob/master/4-print_float.py).
+12. [Compile]()
+* A Shell script (101-compile) that compiles a Python script specified in the environment variable $PYFILE. The compiled output is saved with a ".pyc" extension (e.g., if $PYFILE is "main.py," then "main.pyc" is created).
 
-* **5. Print string**
-  * [5-print_string.py](./5-print_string.py): Python script that prints a string stored
-  in the variable `str` three times, then a new line, then the first nine characters
-  contained in `str`, followed by another new line.
-  * Completion of [this source code](https://github.com/holbertonschool/0x00.py/blob/master/5-print_string.py).
+13. [ByteCode -> Python #1]()
+* A Python function (102-magic_calculation.py) that performs the same operations as the given Python bytecode. 
+The bytecode calculates 98 raised to the power of a, adds b to the result, and returns the final value.
 
-* **6. Play with strings**
-  * [6-concat.py](./6-concat.py): Python script that prints `Welcome to Holberton
-  School!` using the variables `str1 = "Holberton"` and `str2 = "School"`.
-  * Completion of [this source code](https://github.com/holbertonschool/0x00.py/blob/master/6-concat.py).
 
-* **7. Copy - Cut - Paste**
-  * [7-edges.py](./7-edges.py): Python script that sets three string variables based
-  on the string contained in the variable `word` as follows:
-  * `word_first_3`: Contains the first three letters of the variable `word`.
-  * `word_last_2`: Contains the last two letters of the variable `word`.
-  * `middle_word`: Contains the value of the variable `word` without the first and last letters.
-  * Completion of [this source code](https://github.com/holbertonschool/0x00.py/blob/master/7-edges.py).
 
-* **8. Create a new sentence**
-  * [8-concat_edges.py](./8-concat_edges.py): Python script that prints `object-oriented
-  programming with Python`, followed by a new line without creating new variables or
-  string literals.
-  * Completion of [this source code](https://github.com/holbertonschool/0x00.py/blob/master/8-concat_edges.py).
 
-* **9. Easter Egg**
-  * [9-easter_egg.py](./9-easter_egg.py): Python script that prints "The Zen of Python" by
-  Tim Peters, followed by a new line.
+Please refer to each script's file for more detailed explanations and code implementation. Happy learning and coding!
 
-* **10. Linked list cycle**
-  * [10-check_cycle.c](./10-check_cycle.c): C function that checks if a linked list
-  contains a cycle.
-  * Returns `0` if there is no cycle and `1` if there is.
-  * Helper files:
-    * [linked_lists.c](./linked_lists.c): C functions handling linked lists for testing
-    [10-check_cycle.c](./10-check_cycle.c) (provided by Holberton School).
-    * [lists.h](./lists.h): Header file containing definitions and prototypes for
-    all types and functions used in [linked_lists.c](./linked_lists.c) and
-    [10-check_cycle.c](./10-check_cycle.c).
 
-* **11. Hello, write**
-  * [100-write.py](./100-write.py): Python script that prints exactly `and that piece of
-  art is useful - Dora Korpar, 2015-10-19`, followed by a new line to `stderr` using
-  the function `write` from the `sys` module.
-  * Exits with a status code of `1`.
+## Usage
 
-* **12. Compile**
-  * [101-compile](./101-compile): Python script that compiles a Python script file stored
-  in the environment variable `$PYFILE` and saves it to an output file
-  `$PYFILEc` (ex. `export PYFILE=my_main.py` => output filename: `my_main.pyc`).
+Follow these steps to run the "Hello, World" Python script:
 
-* **13. ByteCode -> Python #1**
-  * [102-magic_calculation.py](./103-magic_calculation.py): Python function matching exactly
-  a bytecode provided by Holberton School.
+1. Clone this repository to your local machine.
+
+```
+git clone https://github.com/your-username/0x00-Python-Hello-World.git
+```
+
+2. Change into the project directory.
+
+```
+cd 0x00-Python-Hello-World
+```
+3. Set the environment variable $PYFILE to the name of the Python script you want to execute.
+```
+export PYFILE=hello_world.py
+```
+ Replace hello_world.py with the name of your Python script.
+
+4. Run the Shell script to execute the Python script.
+```
+./run_python_script.sh
+```
+The `"Hello, World"` message should be displayed in the terminal.
+
+## Support
+If you encounter any issues or have questions regarding this project, please open an issue on the repository.
+
+## Contributing
+We welcome contributions to improve this project and help others learn Python. To contribute, follow these steps:
+
+1. Fork the repository.
+2. Create a new branch with your feature or bug fix.
+3. Make your changes and commit them.
+4. Push your changes to your fork.
+5. Submit a pull request to this repository.
+
+## License
+This project is licensed under the MIT License - see the LICENSE file for details.
