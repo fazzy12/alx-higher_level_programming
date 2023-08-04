@@ -1,4 +1,7 @@
 #!/usr/bin/python3
-for c in range(ord('a'), ord('z')+1):
-    if c is not (ord('q')) and c is not (ord('e')):
-        print('{}'.format(chr(c)), end='')
+"""Print the alphabet in lowercase, not followed by a new line."""
+for alpahbets in range(97, 123):
+    alpahbets = chr(alpahbets)
+    if 'e' in alpahbets or 'q' in alpahbets:
+        continue
+    print("{:s}".format(alpahbets), end="")
