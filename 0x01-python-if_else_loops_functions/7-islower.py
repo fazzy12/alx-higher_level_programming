@@ -1,11 +1,7 @@
 #!/usr/bin/python3
-# 7-islower.py
-# ifeanyi kalu
-
-
 def islower(c):
-    """Check for lowercase characters."""
-    if ord(c) >= 97 and ord(c) <= 122:
+    """check if character is lowwer"""
+    if c >= 'a' and c <= 'z':
         return True
     else:
         return False
