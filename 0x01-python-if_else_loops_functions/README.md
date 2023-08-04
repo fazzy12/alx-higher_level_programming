@@ -1,144 +1,124 @@
-# Python - if/else, loops, functions
+# 0x01. Python - if/else, loops, functions
+Welcome to the `"0x01. Python - if/else, loops, functions"` project repository!
 
-In this project, I began utilizing conditionals and loops in Python by using `if`,
-`if ... else`, `break`, `continue`, `pass`, and `range` statements with `while` and
-`for` loops. I practiced writing my own Python functions while learning about scope of
-variables, tracebacks, and arithmetic operators.
+In this project, we dive into the world of conditional statements, loops, and functions in Python. Strengthen your
+understanding of decision-making with `if/else` statements, master `loop` structures, and explore the versatility of `Python` functions.
 
-## Tests :heavy_check_mark:
+## Table of Contents
 
-* [tests](./tests): Folder of test files. Provided by Holberton School.
+- Description
+- Project Tasks
+- Usage
+- Files
+- How to Run Tests
+- Contributing
+- License
+- Description
 
-## Function Prototypes :floppy_disk:
+In this project, we explore Python's control flow mechanisms, which are essential for writing flexible and powerful 
+programs. Through a series of tasks, we learn how to use `if/else` statements to make decisions based on conditions, 
+construct loops `(while and for)` for repetitive tasks, and create functions to organize code and make it reusable.
 
-Prototypes for functions written in this project:
+## Project Tasks
+The tasks in this project cover a wide range of concepts related to conditionals, `loops`, and functions in `Python`. Some of the key topics include:
 
-| File                       | Prototype                                               |
-| -------------------------- | ------------------------------------------------------- |
-| `7-islower.py`             | `def islower(c):`                                       |
-| `8-uppercase.py`           | `def uppercase(str):`                                   |
-| `9-print_last_digit.py`    | `def print_last_digit(number):`                         |
-| `10-add.py`                | `def add(a, b):`                                        |
-| `11-pow.py`                | `def pow(a, b):`                                        |
-| `12-fizzbuzz.py`           | `def fizzbuzz():`                                       |
-| `13-insert_number.c`       | `listint_t *insert_node(listint_t **head, int number);` |
-| `101-remove_char_at.py`    | `def remove_char_at(str, n):`                           |
-| `102-magic_calculation.py` | `def magic_calculation(a, b, c):`                       |
+- Working with `if`, `else`, and `elif` statements.
+- Using loops `(while and for)` to iterate over data.
+- Implementing nested loops and loop control statements `(break and continue)`.
+- Creating and calling functions with arguments and return values.
+- Understanding function `scope` and `global` variables.
 
-## Tasks :page_with_curl:
+## Usage
+In each task's directory, you will find a `Python` script implementing the required functionality. 
+Some tasks may also have associated test files to verify the correctness of your solutions.
 
-* **0. Positive anything is better than negative nothing**
-  * [0-positive_or_negative.py](./0-positive_or_negative.py): Python program that assigns
-  a random signed number to the variable `number` each time it is executed and
-  prints whether `number` is positive or negative.
-  * Prints the number followed by:
-    * If the number is greater than 0: `is positive`
-    * If the number is 0: `is zero`
-    * If the number is less than 0: `is negative`
-    * Followed by a new line.
-  * Completion of [this source code](https://github.com/holbertonschool/0x01.py/blob/master/0-positive_or_negative_py).
+## Files
+The project is organized into separate directories for each task. In each task's directory, 
+you will find a Python script containing the code for that task.
 
-* **1. The last digit**
-  * [1-last_digit.py](./1-last_digit.py): Python program that assigns a random signed number
-  to the variable `number` each time it is executed and prints its last digit.
-  * Prints the string `Last digit of [number] is [last_digit]` followed by:
-    * If the number is greater than 5: `and is greater than 5`
-    * If the number is 0: `and is 0`
-    * If the number is less than 6 and not 0: `and is less than 6 and not 0`
-    * Followed by a new line.
-  * Completion of [this source code](https://github.com/holbertonschool/0x01.py/blob/master/1-last_digit_py).
+# 0x01. Python - if/else, loops, functions
+Welcome to the `"0x01. Python - if/else, loops, functions"` project repository!
 
-* **2. I sometimes suffer from insomnia. And when I can't fall asleep, I play what I call the alphabet game**
-  * [2-print_alphabet.py](./2-print_alphabet.py): Python program that prints the alphabet
-  in lowercase, not followed by a new line.
-  * Using only one `print` and one loop.
-  * Without storing characters in variables or importing modules.
+In this project, we dive into the world of conditional statements, loops, and functions in Python. Strengthen your
+understanding of decision-making with `if/else` statements, master `loop` structures, and explore the versatility of `Python` functions.
 
-* **3. When I was having that alphabet soup, I never thought that it would pay off**
-  * [3-print_alphabt.py](./3-print_alphabt.py): Python program that prints the
-  alphabet in lowercase, followed by a new line.
-  * Using only one `print` and one loop.
-  * Without storing characters in variables or importing modules.
-  * Prints every letter except for `q` and `e`.
+## Table of Contents
 
-* **4. Hexadecimal printing**
-  * [4-print_hexa.py](./4-print_hexa.py): Python program that prints all numbers from
-  `0` to `98` in decimal and hexadecimal.
-  * Using only one `print` and one loop.
-  * Without storing numbers or strings in variables or importing modules.
-  * Printing format: `[decimal] = [hexadecimal]`
+- Description
+- Project Tasks
+- Usage
+- Files
+- How to Run Tests
+- Contributing
+- License
+- Description
 
-* **5. 00...99**
-  * [5-print_comb2.py](./5-print_comb2.py): Python program that prints numbers from `0`
-  to `99` two digits each.
-  * Numbers are separated by `, `, except for the last number, which is followed by a new line.
-  * Using no more than two `print` functions and one loop.
-  * Without storing numbers or strings in variables or importing modules.
+In this project, we explore Python's control flow mechanisms, which are essential for writing flexible and powerful 
+programs. Through a series of tasks, we learn how to use `if/else` statements to make decisions based on conditions, 
+construct loops `(while and for)` for repetitive tasks, and create functions to organize code and make it reusable.
 
-* **6. Inventing is a combination of brains and materials. The more brains you use, the less material you need**
-  * [6-print_comb3.py](./6-print_comb3.py): Python program that prints all possible
-  different combinations of two digits in ascending order.
-  * Numbers are separated by `, `, except for the last number, which is followed by a new line.
-  * The two digits must be different - `01` and `10` are considered identical.
-  * Using no more than three `print` functions and two loops.
-  * Without storing numbers or strings in variables or importing modules.
+## Project Tasks
+The tasks in this project cover a wide range of concepts related to conditionals, `loops`, and functions in `Python`. Some of the key topics include:
 
-* **7. islower**
-  * [7-islower.py](./7-islower.py): Python function that checks for lowercase characters.
-  * Returns `True` if `c` is lowercase, `False` otherwise.
-  * Without importing modules or using `str.upper()` or `str.isupper()`.
+- Working with `if`, `else`, and `elif` statements.
+- Using loops `(while and for)` to iterate over data.
+- Implementing nested loops and loop control statements `(break and continue)`.
+- Creating and calling functions with arguments and return values.
+- Understanding function `scope` and `global` variables.
 
-* **8. To uppercase**
-  * [8-uppercase.py](./8-uppercase.py): Python function that prints a string in
-  uppercase followed by a new line.
-  * Using no more than two `print` functions and one loop.
-  * Without importing modules or using `str.upper()` or `str.isupper()`.
+## Usage
+In each task's directory, you will find a `Python` script implementing the required functionality. 
+Some tasks may also have associated test files to verify the correctness of your solutions.
 
-* **9. There are only 3 colors, 10 digits, and 7 notes; its what we do with them that's important**
-  * [9-print_last_digit.py](./9-print_last_digit.py): Python function that prints the last
-  digit of a number.
-  * Returns the value of the last digit.
-  * Without importing modules.
+## Files
+The project is organized into separate directories for each task. In each task's directory, 
+you will find a Python script containing the code for that task.
 
-* **10. a + b**
-  * [10-add.py](./10-add.py): Python function that returns the addition of two integers.
-  * Without importing modules.
+[0-positive_or_negative.py]()
+[1-last_digit.py]()
+[2-print_alphabet.py]()
+[3-print_alphabet.py]()
+[4-print_hexa.py]()
+[5-print_comb2.py]()
+[6-print_comb3.py]()
+[7-islower.py]()
+[8-uppercase.py]()
+[9-print_last_digit.py]()
+[10-add.py]()
+[11-pow.py]()
+[12-fizzbuzz.py]()
+[13-insert_number.c]() / [list.h]()
+[100-print_tebahpla.py]()
+[101-remove_car_at.py]()
+[102-magic_calculation.py]()
 
-* **11. a ^ b**
-  * [11-pow.py](./11-pow.py): Python function that returns `a` to the power of `b`.
-  * Without importing modules.
+## How to Run Tests
+To test the functionality of the scripts, navigate to the root directory of the respective 
+task and run the test script. The test script is usually named tests.py.
 
-* **12. Fizz Buzz**
-  * [12-fizzbuzz.py](./12-fizzbuzz.py): Python function that prints the numbers from
-  `1` to `100` followed by a space.
-  * For multiples of three, `Fizz` is printed instead of the number.
-  * For multiples of five, `Buzz` is printed instead of the number.
-  * For multiples of three and five, `FizzBuzz` is printed instead of the number.
-  * Without importing modules.
+```
+python tests.py
+```
+Make sure you have Python installed and any necessary dependencies available.
 
-* **13. Insert in sorted linked list**
-  * [13-insert_number.c](./13-insert_number.c): C function that inserts a number
-  into a sorted linked list.
-  * If the function fails, returns `NULL`.
-  * Otherwise, returns the address of the new node.
-  * Helper files:
-    * [linked_lists.c](./linked_lists.c): C functions handling linked lists for testing
-    [13-insert_number.c](./13-insert_number.c) (provided by Holberton School).
-    * [lists.h](./lists.h): Header file containing definitions and prototypes for
-    all types and functions used in [linked_lists.c](./linked_lists.c) and
-    [13-insert_number.c](./13-insert_number.c).
+## Contributing
+Contributions to this project are welcome! If you find any issues or want to add improvements, feel free to open a `pull request`.
 
-* **14. Smile in the mirror**
-  * [100-print_tebahpla.py](./100-print_tebahpla.py): Python program that prints the alphabet
-  in reverse order, alternating lowercase and uppercase, not followed by a new line.
-  * Using only one `print` and one loop.
-  * Without storing characters in variables or importing modules.
+## License
+This project is licensed under the `MIT License`. Feel free to use the code in this repository as a reference or for your own projects. Happy coding! 🚀🔥
 
-* **15. Remove at position**
-  * [101-remove_char_at.py](./101-remove_char_at_py): Python function that
-  creates a copy of a string without the character at position `n`.
-  * Without importing modules.
 
-* **16. ByteCode -> Python #2**
-  * [102-magic_calculation.py](./102-magic_calculation.py): Python function matching exactly a
-  bytecode provided by Holberton School.
+## How to Run Tests
+To test the functionality of the scripts, navigate to the root directory of the respective 
+task and run the test script. The test script is usually named tests.py.
+
+```
+python tests.py
+```
+Make sure you have Python installed and any necessary dependencies available.
+
+## Contributing
+Contributions to this project are welcome! If you find any issues or want to add improvements, feel free to open a `pull request`.
+
+## License
+This project is licensed under the `MIT License`. Feel free to use the code in this repository as a reference or for your own projects. Happy coding! 🚀🔥
