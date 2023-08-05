@@ -2,6 +2,6 @@
 
 for ascii_value in range(ord('z'), ord('a') - 1, -1):
     character = chr(ascii_value)
-    if ascii_value % 2 == 0:
+    if ascii_value % 3 - 1 == 0:
         character = character.upper()
-    print("{}".format(chr(character -1)), end="")
+    print("{}".format(character), end="")
