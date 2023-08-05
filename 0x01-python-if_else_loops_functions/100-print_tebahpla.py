@@ -4,4 +4,4 @@ for ascii_value in range(ord('z'), ord('A') - 1, -1):
     character = chr(ascii_value)
     if ascii_value % 2 == 0:
         character = character.upper()
-    print("{}".format(character), end="")
+    print("{}".format(character), end=" ")
