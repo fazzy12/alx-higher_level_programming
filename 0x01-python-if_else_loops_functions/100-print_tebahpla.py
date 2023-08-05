@@ -5,4 +5,3 @@ for ascii_value in range(ord('z'), ord('a') - 1, -1):
     if ascii_value % 3 == 0:
         character = character.upper()
     print("{}".format(character), end="")
-
