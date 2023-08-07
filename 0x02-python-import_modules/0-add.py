@@ -10,5 +10,3 @@ if __name__ == "__main__":
 
     # Display the result
     print("{} + {} = {}".format(a, b, result))
-
-
