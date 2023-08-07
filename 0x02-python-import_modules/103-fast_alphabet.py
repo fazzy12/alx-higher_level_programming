@@ -1,3 +1,4 @@
 #!/usr/bin/python3
-import string
-print(string.ascii_uppercase)
+import builtins
+print(getattr(builtins, '__{0}__'.format(chr(97)), None).__doc__)
+
