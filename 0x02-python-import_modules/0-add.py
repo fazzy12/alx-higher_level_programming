@@ -1,6 +1,7 @@
 #!/usr/bin/python3
 from add_0 import add
 
+
 def main():
     """Main function to execute the addition.
 
@@ -15,6 +16,7 @@ def main():
 
     # Display the result
     print("{} + {} = {}".format(a, b, result))
+
 
 if __name__ == "__main__":
     main()
