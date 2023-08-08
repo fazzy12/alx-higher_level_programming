@@ -1,128 +1,112 @@
-# Python - Data Structures: Lists, Tuples
+# CPython #0: Python Lists
+`CPython` is the reference implementation of the `Python` programming language, written in `C`. This task involves creating a `C` function that provides some basic information about `Python lists`. By examining the underlying `C` implementation of `Python`, we can gain insights into how `lists` work in the language.
 
-In this project, I learned about how sequence data types work in
-Python - specifically, lists and tuples.
+## Task Details
+Create a `C` function called `print_python_list_info` that prints information about a `Python list`. The details to be printed include:
 
-## Tests :heavy_check_mark:
+- Size of the Python List (number of elements)
+- Allocated memory (number of slots)
+- Type of elements in the list
 
-* [tests](./tests): Folder of test files. Provided by Holberton School.
+The provided Python version for this task is `3.4``. The shared library containing the `C` function will be compiled using the following command:
 
-## Function Prototypes :floppy_disk:
+```
+gcc -Wall -Werror -Wextra -pedantic -std=c99 -shared -Wl,-soname,PyList -o libPyList.so -fPIC -I/usr/include/python3.4 100-print_python_list_info.c
+```
+The `Python` `script` `100-test_lists.py` demonstrates the usage of the `C` `function`. It creates and manipulates `Python lists`, calling the `print_python_list_info` function to display relevant information about the `lists`.
 
-Prototypes for functions written in this project:
 
-| File                               | Prototype                                      |
-| ---------------------------------- | ---------------------------------------------- |
-| `0-print_list_integer.py`          | `def print_list_integer(my_list=[]):`          |
-| `1-element_at.py`                  | `def element_at(my_list, idx):`                |
-| `2-replace_in_list.py`             | `def replace_in_list(my_list, idx, element):`  |
-| `3-print_reversed_list_integer.py` | `def print_reversed_list_integer(my_list=[]):` |
-| `4-new_in_list.py`                 | `def new_in_list(my_list, idx, element):`      |
-| `5-no_c.py`                        | `def no_c(my_string):`                         |
-| `6-print_matrix_integer.py`        | `def print_matrix_integer(matrix=[[]]):`       |
-| `7-add_tuple.py`                   | `def add_tuple(tuple_a=(), tuple_b=()):`       |
-| `8-multiple_returns.py`            | `def multiple_returns(sentence):`              |
-| `9-max_integer.py`                 | `def max_integer(my_list=[]):`                 |
-| `10-divisible_by_2.py`             | `def divisible_by_2(my_list=[]):`              |
-| `11-delete_at.py`                  | `def delete_at(my_list=[], idx=0):`            |
-| `100-print_python_list_info.c`     | `void print_python_list_info(PyObject *p);`    |
+## Files
 
-## Tasks :page_with_curl:
+[0-print_list_integer.py]()
+- Description: Python script to print a list of integers, one per line.
+- Usage: `./0-main.py`
 
-* **0. Print a list of integers**
-  * [0-print_list_integer.py](./0-print_list_integer.py): Python function that prints all
-  integers of a list, one per line.
-  * Without importing modules or casting integers into strings.
+[1-element_at.py]()
+- Description: Python script to retrieve an element from a list at a specific index.
+- Usage: `./1-main.py`
 
-* **1. Secure access to an element in a list**
-  * [1-element_at.py](./1-element_at.py): Python function that retrieves an element
-  from a list.
-  * If `idx` is negative or out of range (greater than the number of elements in
-  `my_list`), the function returns `None`.
-  * Without import modules or using `try/except`.
+[2-replace_in_list.py]()
+- Description: Python script to replace an element in a list at a specific position.
+- Usage: `./2-main.py`
 
-* **2. Replace element**
-  * [2-replace_in_list.py](./2-replace_in_list.py): Python function that replaces an element
-  of a list at a specific position.
-  * If `idx` is negative or out of range (greater than the number of elements
-  in `my_list`), the function returns the original list.
-  * Without importing modules or using `try/except`.
+[3-print_reversed_list_integer.py]()
+- Description: Python script to print a list of integers in reverse order.
+- Usage: `./3-main.py`
 
-* **3. Print a list of integers... in reverse!**
-  * [3-print_reversed_list_integer.py](./3-print_reversed_list_integer.py): Python
-  function that prints all integers of a list, one per line, in reverse order.
-  * Without importing modules or casting integers into strings.
+[4-new_in_list.py]()
+- Description: Python script to replace an element in a list at a specific position without modifying the original list.
+- Usage: `./4-main.py`
 
-* **4. Replace in a copy**
-  * [4-new_in_list.py](./4-new_in_list.py): Python function that replaces an element of a
-  list at a specific position without modifying the original list.
-  * If `idx` is negative or out of range (greater than the number of elements in
-  `my_list`), the function returns the original list.
-  * Without importing modules or using `try/except`.
+[5-no_c.py]()
+- Description: Python script to remove all occurrences of characters 'c' and 'C' from a string.
+- Usage: `./5-main.py`
 
-* **5. Can you C me now?**
-  * [5-no_c.py](./5-no_c.py): Python function that removes all characters `c`
-  and `C` from a string and returns the string.
-  * Without importing modules or using `str.replace()`.
+[6-print_matrix_integer.py]()
+- Description: Python script to print a matrix of integers.
+- Usage: `./6-main.py`
 
-* **6. Lists of lists = Matrix**
-  * [6-print_matrix_integer.py](./6-print_matrix_integer.py): Python function that prints
-  a matrix of integers, one row per line.
-  * Without casting integers into strings.
+[7-add_tuple.py]()
+- Description: Python script to add two tuples element-wise.
+- Usage: `./7-main.py`
 
-* **7. Tuples addition**
-  * [7-add_tuple.py](./7-add_tuple.py): Python function that adds two tuples.
-  * Returns a tuple with two integers:
-    * The first element is the addition of the first element of each argument.
-    * The second element is the addition of the second element of each argument.
-  * If a tuple is smaller than 2, the value `0` is used for the missing integer.
-  * If a tuple is larger than 2, only the first two integers are used.
-  * Without importing modules.
+[8-multiple_returns.py]()
+- Description: Python script to return the length of a string and its first character.
+-Usage: `./8-main.py`
 
-* **8. More returns!**
-  * [8-multiple_returns.py](./8-multiple_returns.py): Python function that returns a
-  tuple with the length of a string and its first character.
-  * If the string is empty, the first character should equal `None`.
-  * Without importing modules.
+[9-max_integer.py]()
+- Description: Python script to find the maximum integer in a list.
+- Usage: `./9-main.py`
 
-* **9. Find the max**
-  * [9-max_integer.py](./9-max_integer.py): Python function that finds the biggest integer
-  of a list.
-  * If the list is empty, the function returns `None`.
-  * Without importing modules or using the builtin `max()`.
+[10-divisible_by_2.py]()
+- Description: Python script to determine if elements in a list are divisible by 2.
+- Usage: `./10-main.py`
 
-* **10. Only by 2**
-  * [10-divisible_by_2.py](./10-divisible_by_2.py): Python function that finds all multiples
-  of 2 in a list.  * Returns a new list of the same size. Each element of the new
-  list contains either `True` or `False` corresponding to whether the integer at
-  the same position in the original list is a multiple of 2.
-  * Without importing modules.
+[11-delete_at.py]()
+- Description: Python script to delete an element at a specific index in a list.
+- Usage: `./11-main.py`
 
-* **11. Delete at**
-  * [11-delete_at.py](./11-delete_at.py): Python function that deletes an item at
-  a specific position in a list.
-  * If `idx` is negative or out of range (greater than the number of elements in
-  `my_list`), the function returns the original list.
-  * Without imporitng modules or using `pop()`.
+[12-switch.py]()
+- Description: Python script to switch the values of two variables.
+- Usage: `./12-switch.py`
 
-* **12. Switch**
-  * [12-switch.py](./12-switch.py): Python program that switches the values of
-  variable `a` and `b`.
-  * Completion of [this source code](https://github.com/holbertonschool/0x03.py/blob/master/12-switch_py).
+[13-is_palindrome.c]()
+- Description: C function to check if a singly linked list is a palindrome.
+- Usage: Compile and run the provided test script.
 
-* **13. Linked list palindrome**
-  * [13-is_palindrome.c](./13-is_palindrome.c): C function that checks if a
-  singly-linked list is a palindrome.
-  * If the function is not a palindrome - returns `0`.
-  * If the function is a palindrome - returns `1`.
-  * An empty list is considered a palindrome.
-  * Helper files:
-    * [linked_lists.c](./linked_lists.c): C functions handling linked lists for
-    testing [13-is_palindrome.c](./13-is_palindrome.c) (provided by Holberton School).
-    * [lists.h](./lists.h): Header file containing definitions and prototypes for all types
-    and functions used in [linked_lists.c](./linked_lists.c) and
-    [13-insert_number.c](./13-insert_number.c).
+[100-print_python_list_info.c]()
+- Description: C function to print basic information about Python lists.
+- Usage: Compile the shared library and run the provided Python test script.
 
-* **14. CPython #0: Python lists**
-  * [100-print_python_list_info.c](./100-print_python_list_info.c): C function that
-  prints basic information about Python lists.
+#### Additional Files
+
+[lists.h]()
+Description: Header file containing structure definitions and function prototypes for the linked list tasks.
+
+
+## How to Run
+
+Compile the shared library:
+````
+gcc -Wall -Werror -Wextra -pedantic -std=c99 -shared -Wl,-soname,PyList -o libPyList.so -fPIC -I/usr/include/python3.4 100-print_python_list_info.c
+````
+Run the Python script:
+
+``````
+python3 100-test_lists.py
+``````
+The output of the script will display information about the Python `lists` created and manipulated using the `C` function.
+
+## Requirements
+
+- `C` compiler `(gcc)`
+- `Python 3.4`
+- `ctypes` library (used for interfacing with shared `C` libraries in `Python`)
+
+## Additional Information
+This task offers insights into the inner workings of Python lists by examining their C-level implementation. By understanding how lists are structured and allocated in memory, we can appreciate the efficiency and versatility of this fundamental data structure in Python.
+
+## Author
+[ifeanyi kalu](http://github.com/fazzy12)
+
+Copyright © 2023 ALX
