@@ -1,150 +1,81 @@
 # Python - More Data Structures: Set, Dictionary
 
-In this project, I learned about sets and dictionaries in Python. I practiced using them
-with the `lambda`, `map`, `filter`, and `reduce` methods.
+### Overview
+This project dives into the fascinating world of sets and dictionaries in Python. It's an exploration 
+of these powerful data structures and how they can be harnessed effectively to solve various programming 
+challenges. Through a series of tasks and functions, this project provides hands-on experience with manipulating 
+sets and dictionaries, as well as utilizing key Python methods like lambda, map, filter, and reduce.
 
-## Tests :heavy_check_mark:
+* Table of Contents
+* Tests
+* Function Prototypes
+* Curriculum
+* Learning Objectives
+* Requirements
+* Usage
+* Contributing
+* License
+* Tests
 
-* [tests](./tests): Folder of test files. Provided by Holberton School.
+The project includes a folder named "tests," which contains test files provided by Holberton School. 
+These tests evaluate the correctness and functionality of the functions developed throughout the project.
 
-## Function Prototypes :floppy_disk:
+## Function Prototypes
+Here's a quick reference to the functions implemented in this project, along with their descriptions and use cases:
 
-Prototypes for functions written in this project:
+- [0-square_matrix_simple.py](./0-square_matrix_simple.py): Computes the square value of all integers in a matrix.
+- [1-search_replace.py](./1-search_replace.py): Replaces all occurrences of an element in a list with another element.
+- [2-uniq_add.py](./2-uniq_add.py): Adds all unique integers in a list (without duplication).
+- [3-common_elements.py](./3-common_elements.py): Returns a set of common elements between two sets.
+- [4-only_diff_elements.py](4-only_diff_elements.py): Returns a set of elements present in only one of two sets.
+- [5-number_keys.py](./5-number_keys.py): Returns the number of keys in a dictionary.
+- [6-print_sorted_dictionary.py](./6-print_sorted_dictionary.py): Prints a dictionary with keys sorted in alphabetic order.
+- [7-update_dictionary.py](./7-update_dictionary.py): Updates a dictionary by adding or replacing key-value pairs.
+- [8-simple_delete.py](./8-simple_delete.py): Deletes a key from a dictionary.
+- [9-multiply_by_2.py](./9-multiply_by_2.py): Returns a new dictionary with all values multiplied by 2.
+- [10-best_score.py](./10-best_score.py): Returns the key with the highest integer value in a dictionary.
+- [11-mutiply_list_map.py](./11-multiply_list_map.py): Returns a list with values multiplied by a number using map.
+- [12-roman_to_int.py](./12-roman_to_int.py): Converts a Roman numeral to an integer.
+- [100-weight_average.py](./100-weight_average.py): Calculates the weighted average of integers in a list of tuples.
+- [101-square_matrix_map.py](./101-square_matrix_map.py): Computes the square value of matrix integers using map.
+- [102-complex_delete.py](./102-complex_delete.py): Deletes keys with a specific value from a dictionary.
+- [103-python.c](./103-python.c): C functions that provide information about Python lists and bytes objects.
 
-| File                           | Prototype                                                                                                 |
-| ------------------------------ | --------------------------------------------------------------------------------------------------------- |
-| `0-square_matrix_simple.py`    | `def square_matrix_simple(matrix=[]):`                                                                    |
-| `1-search_replace.py`          | `def search_replace(my_list, search, replace):`                                                           |
-| `2-uniq_add.py`                | `def uniq_add(my_list=[]):`                                                                               |
-| `3-common_elements.py`         | `def common_elements(set_1, set_2):`                                                                      |
-| `4-only_diff_elements.py`      | `def only_diff_elements(set_1, set_2):`                                                                   |
-| `5-number_keys.py`             | `def number_keys(a_dictionary):`                                                                          |
-| `6-print_sorted_dictionary.py` | `def print_sorted_dictionary(a_dictionary):`                                                              |
-| `7-update_dictionary.py`       | `def update_dictionary(a_dictionary, key, value):`                                                        |
-| `8-simple_delete.py`           | `def simple_delete(a_dictionary, key=""):`                                                                |
-| `9-multiply_by_2.py`           | `def multiply_by_2(a_dictionary):`                                                                        |
-| `10-best_score.py`             | `def best_score(a_dictionary):`                                                                           |
-| `11-mutiply_list_map.py`       | `def mutiply_list_map(my_list=[], number=0):`                                                             |
-| `12-roman_to_int.py`           | `def roman_to_int(roman_string):`                                                                         |
-| `100-weight_average.py`        | `def weight_average(my_list=[]):`                                                                         |
-| `101-square_matrix_map.py`     | `def square_matrix_map(matrix=[]):`                                                                       |
-| `102-complex_delete.py`        | `def complex_delete(a_dictionary, value):`                                                                |
-| `103-python.c`                 | <ul><li>`void print_python_list(PyObject *p);`</li><li>`void print_python_bytes(PyObject *p);`</li></ul> |
+## Curriculum
 
-## Tasks :page_with_curl:
+This project is part of the SE Foundations curriculum at Holberton School. It falls under the "Python - 
+More Data Structures: Set, Dictionary" section and contributes to the learning objectives of u
+nderstanding sets, dictionaries, lambda functions, and Python's map, reduce, and filter functions.
 
-* **0. Squared simple**
-  * [0-square_matrix_simple.py](./0-square_matrix_simple.py): Python function that computes
-  the square value of all integers of a matrix.
-  * The parameter `matrix` is a two-dimensional array.
-  * Returns a matrix of the same size as `matrix` where each value is the
-  square of the input value.
-  * The initial matrix is not modified.
-  * Without importing modules.
+## Learning Objectives
+By completing this project, you will be able to:
 
-* **1. Search and replace**
-  * [1-search_replace.py](./1-search_replace.py): Python function that replaces all occurences
-  of an element by another in a new list.
-  * The parameter `my_list` is the initial list.
-  * The parameter `search` is the element to replace in the list.
-  * The parameter `replace` is the new element.
-  * Without importing modules.
+* Understand the advantages of Python programming.
+* Utilize sets and dictionaries effectively.
+* Implement common methods of sets and dictionaries.
+* Choose between sets, dictionaries, and lists for different scenarios.
+* Iterate over sets and dictionaries using appropriate techniques.
+* Apply lambda functions and explore the map, reduce, and filter functions.
 
-* **2. Unique addition**
-  * [2-uniq_add.py](./2-uniq_add.py): Python function that adds all unique integers in
-  a list (once for each integer).
-  * Without importing modules.
+# Requirements
+* Supported editors: `vi, vim, emacs`
+* All files `interpreted/compiled` on `Ubuntu 20.04 LTS using Python 3.8.5`
+* Files end with a new line and start with `#!/usr/bin/python3`
+* A `README.md` file at the project's root folder is mandatory
+* Code should follow the `PEP 8` style guidelines `(check with pycodestyle)`
+* All files must be `executable`
+* Code length is tested using `wc`
+* Various quizzes and tests are included to assess your understanding and progress.
 
-* **3. Present in both**
-  * [3-common_elements.py](./3-common_elements.py): Python function that returns a
-  set of common elements in two sets.
-  * Without importing modules.
+## Usage
+You can clone this repository to your local machine to explore the functions, tests, and examples provided in the project. Feel free to modify, enhance, and learn from the codebase. To run the tests and see the functions in action, follow the instructions provided in the respective task files.
 
-* **4. Only differents**
-  * [4-only_diff_elements.py](./4-only_diff_elements.py): Python function that returns a
-  set of all elements present in only one set.
-  * Without importing modules.
+## Contributing
+Contributions to this project are not accepted as it is an educational exercise. However, if you have suggestions, improvements, or insights, feel free to share them in the appropriate Holberton School forum.
 
-* **5. Number of keys**
-  * [5-number_keys.py](./5-number_keys.py): Python function that returns the number of
-  keys in a dictionary.
-  * Without importing modules.
+## Authour
+[Ifeanyi kalu](https://github.com/fazzy12)
 
-* **6. Print sorted dictionary**
-  * [6-print_sorted_dictionary.py](./6-print_sorted_dictionary.py): Python function that
-  prints a dictionary by ordered keys.
-  * The function assumes all keys are strings.
-  * Keys are printed in alphabetic order.
-  * Keys are only sorted on the first level.
-  * Dictionary values can have any type.
-  * Without importing modules.
 
-* **7. Update dictionary**
-  * [7-update_dictionary.py](./7-update_dictionary.py): Python function that replaces or
-  adds key/value pairs in a dictionary.
-  * The parameter `key` is always a string.
-  * The parameter `value` is any type.
-  * If a key exists in the dictionary, the value is replaced.
-  * If a key does not exist in the dictionary, it is created.
-  * Without importing modules.
 
-* **8. Simple delete by key**
-  * [8-simple_delete.py](./8-simple_delete.py): Python function that deletes a key
-  in a dictionary.
-  * The paramter `key` is always a string.
-  * If the key does not exist, the dictionary does not change.
-  * Without importing modules.
 
-* **9. Multiply by 2**
-  * [9-multiply_by_2.py](./9-multiply_by_2.py): Python function that returns a
-  new dictionary with all values multiplied by 2.
-  * The function assumes all values are integers.
-  * Without importing modules.
-
-* **10. Best score**
-  * [10-best_score.py](./10-best_score.py): Python function that returns a key value
-  with the biggest integer value.
-  * The function assumes all values are integers.
-  * The function assumes all students have a different score.
-  * If no score is found, the functino returns `None`.
-  * Without importing modules.
-
-* **11. Multiply by using map**
-  * [11-mutiply_list_map.py](./11-multiply_list_map.py): Python function that returns a
-  list with all values multiplied by a number using `map`.
-  * Returns a new length of the same length has `my_list` with each value
-  multiplied by `number`.
-  * The initial list is not modified.
-  * Without using loops or importing modules.
-
-* **12. Roman to Integer**
-  * [12-roman_to_int.py](./12-roman_to_int.py): Python function that converts a roman
-  numeral to an integer.
-  * The function assumes the number will be between 1-3999.
-  * If the parameter `roman_string` is not a string or `None`, the function returns `0`.
-
-* **13. Weighted average!**
-  * [100-weight_average.py](./100-weight_average.py): Python function that returns the
-  weighted average of all integers in a list of tuples.
-  * Tuple format: `(<score>, <weight>)`.
-  * If the list is empty - returns `0`.
-  * Without importing modules.
-
-* **14. Squared by using map**
-  * [101-square_matrix_map.py](./101-square_matrix_map.py): Python function that computes
-  the square value of all integers of a matrix using `map`.
-  * The parameter `matrix` is a two-dimensional array.
-  * Returns a new matrix of the same size as `matrix` with each value squared.
-  * The initial matrix is not modified.
-  * Without using loops or importing modules.
-
-* **15. Delete by value**
-  * [102-complex_delete.py](./102-complex_delete.py): Python function that deletes keys with
-  a specific value in a dictionary.
-  * If the value does not exists, the dictionary is not changed.
-  * All keys having the searched value are deleted.
-  * Without importing modules.
-
-* **16. CPython #1: PyBytesObject**
-  * [103-python.c](./103-python.c): C functions that print basic information about
-  Python lists and Python bytes objects.
