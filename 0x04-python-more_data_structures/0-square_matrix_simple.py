@@ -1,8 +1,8 @@
-#!/usr/bin/python3
-# 0-square_matrix_simple.py
-# ifeanyi kalu
-
-
 def square_matrix_simple(matrix=[]):
-    """Compute the square value of all integers of a matrix."""
-    return ([list(map(lambda x: x * x, row)) for row in matrix])
+    squared_matrix = []
+    for row in matrix:
+        squared_row = []
+    for num in row:
+        squared_row.append(num**2)
+    squared_matrix.append(squared_row)
+    return squared_matrix
