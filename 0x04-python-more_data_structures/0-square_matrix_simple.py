@@ -1,14 +1,5 @@
-#!/usr/bin/python3
 def square_matrix_simple(matrix=[]):
-    return [[j**2 for j in i] for i in matrix]
-
-
-matrix = [
-    [1, 2, 3],
-    [4, 5, 6],
-    [7, 8, 9]
-]
-
-new_matrix = square_matrix_simple(matrix)
-print(new_matrix)
-print(matrix)
+    new_matrix = []
+    for i in matrix:
+        new_matrix.append(list(map(lambda j: j**2, i)))
+    return new_matrix
