@@ -1,9 +1,5 @@
 #!/usr/bin/python3
-# 8-simple_delete.py
-# ifeanyi kalu
-
-
 def simple_delete(a_dictionary, key=""):
-    if key in a_dictionary:
-        del a_dictionary[key]
-    return (a_dictionary)
+    # .pop() returns the value of the removed item
+    a_dictionary.pop(key, None)
+    return a_dictionary
