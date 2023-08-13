@@ -1,8 +1,8 @@
 #!/usr/bin/python3
-# 6-print_sorted_dictionary.py
-# ifeanyi kalu
-
-
 def print_sorted_dictionary(a_dictionary):
-    """Print a dictionary by ordered keys."""
-    [print("{}: {}".format(k, a_dictionary[k])) for k in sorted(a_dictionary)]
+    for key in sorted(a_dictionary):
+        print("{}: {}".format(key, a_dictionary[key]))
+
+
+a_dictionary = { 'language': "C", 'Number': 89, 'track': "Low level", 'ids': [1, 2, 3] }
+print_sorted_dictionary(a_dictionary)
