@@ -1,14 +1,12 @@
 #!/usr/bin/python3
-# 102-complex_delete.py
-# ifeanyi kalu
-
-
 def complex_delete(a_dictionary, value):
-    """Delete keys with a specific value in a dictionary."""
-    while value in a_dictionary.values():
-        for k, v in a_dictionary.items():
-            if v == value:
-                del a_dictionary[k]
-                break
+    keys_to_remove = []
 
-    return (a_dictionary)
+    for key, val in a_dictionary.items():
+        if val == value:
+            keys_to_remove.append(key)
+
+    for key in keys_to_remove:
+        del a_dictionary[key]
+
+    return a_dictionary
