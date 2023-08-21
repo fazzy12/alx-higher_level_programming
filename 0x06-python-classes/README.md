@@ -1,10 +1,14 @@
+# Python - Classes and Objects
+
+Here is an OOP meme wrapped in a table:
+
 <div style="width: 100%; height: 0; padding-bottom: 100%; position: relative;">
     <img src="oop-meme.jpg" alt="OOP Image" style="position: absolute; width: 80%; height: 80%; object-fit: cover;">
-</div>
+</div> 
 
 
 
-# Python - Classes and Objects
+
 
 ## My Journey in Learning Object-Oriented Programming (OOP)
 Welcome to my exploration of Object-Oriented Programming `(OOP)` in Python! In this project, I'll be taking you through various concepts related to `classes and objects`, helping you understand the core principles and practices of `OOP` in `Python`.
