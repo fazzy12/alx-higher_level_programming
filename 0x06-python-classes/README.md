@@ -16,7 +16,7 @@ Object-Oriented Programming is an essential paradigm in Python that empowers us 
 By the end of this project, I will be able to explain the following concepts without relying on external sources:
 
 ## General
-- The awesomeness of Python programming.
+- The awesomeness of `Python` programming.
 - The fundamental concepts of `Object-Oriented Programming`.
 - The concept of "`first-class everything`."
 - What a `class` is and how it acts as a blueprint for `objects`.
