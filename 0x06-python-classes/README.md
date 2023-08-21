@@ -1,7 +1,5 @@
 # Python - Classes and Objects
 
-Here is an OOP meme wrapped in a table:
-
 <div style="width: 100%; height: 0; padding-bottom: 100%; position: relative;">
     <img src="oop-meme.jpg" alt="OOP Image" style="position: absolute; width: 80%; height: 80%; object-fit: cover;">
 </div> 
