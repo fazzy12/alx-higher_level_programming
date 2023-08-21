@@ -5,7 +5,12 @@ Welcome to the Higher-level Programming repository! This repository contains a c
 the higher-level programming track at Holberton School. Throughout these projects, I've gained proficiency in Python, MySQL, and JavaScript. 
 Additionally, I continued to reinforce and expand my skills in C and shell scripting. Below is a list of the specific projects contained in this repository:
 
-![Cover Photo](python.jpg)
+
+
+<div style="width: 100%; height: 0; padding-bottom: 100%; position: relative;">
+    <img src="python.jpg" alt="OOP Image" style="position: absolute; width: 100%; height: 100%; object-fit: cover;">
+</div>
+
 
 ## projects
 
