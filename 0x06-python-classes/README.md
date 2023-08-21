@@ -1,102 +1,73 @@
+<div style="width: 100%; height: 0; padding-bottom: 100%; position: relative;">
+    <img src="oop-meme.jpg" alt="OOP Image" style="position: absolute; width: 100%; height: 100%; object-fit: cover;">
+</div>
+
+
+
 # Python - Classes and Objects
 
-In this project, I began practicing object-oriented programming using
-classes and objects in Python. I learned about attributes, methods, and
-properties as well as data abstraction, data encapsulation, and information
-hiding.
+## My Journey in Learning Object-Oriented Programming (OOP)
+Welcome to my exploration of Object-Oriented Programming `(OOP)` in Python! In this project, I'll be taking you through various concepts related to `classes and objects`, helping you understand the core principles and practices of `OOP` in `Python`.
 
-## Tests :heavy_check_mark:
+## Background Context
+Object-Oriented Programming is an essential paradigm in Python that empowers us to create structured and modular code. It's important to grasp the foundational concepts of OOP to build efficient and maintainable software solutions.
 
-* [tests](./tests): Folder of test files. Provided by Holberton School.
+## Learning Objectives
+By the end of this project, I will be able to explain the following concepts without relying on external sources:
 
-## Tasks :page_with_curl:
+## General
+- The awesomeness of Python programming.
+- The fundamental concepts of `Object-Oriented Programming`.
+- The concept of "`first-class everything`."
+- What a `class` is and how it acts as a blueprint for `objects`.
+- The distinction between a `class` and an `object` `(or instance)`.
+- The role of `attributes` and their `accessibility levels` `(public, protected, private)`.
+- The significance of the `self` keyword in methods.
+- The purpose of the special `__init__` method and how to use it.
+- The concepts of `Data Abstraction`, `Data Encapsulation`, and `Information Hiding`.
+- What a `property` is and how it differs from an attribute in Python.
+- The Pythonic way to implement `getters` and `setters`.
+- How to dynamically create new attributes for existing `instances and classes`.
+- How to `bind attributes to objects and classes`.
+- The role and content of the `__dict__` of a `class` `and/or instance`.
+- How Python searches for attributes within `objects or classes`.
+- How to use the `getattr` function.
 
-* **0. My first square**
-  * [0-square.py](./0-square.py): Python class `Square` that defines a square.
+## Project Tasks
+In this project, I will be completing several tasks to demonstrate my understanding of OOP. Here's a quick overview of the tasks I will be working on:
 
-* **1. Square with size**
-  * [1-square.py](./1-square.py): Python class `Square` that defines a square. Builds on
-  [0-square.py](./0-square.py) with:
-    * Private instance attribute `size`.
-    * Instantiation with `size`.
+`Task 0`: My First Square
+Create an empty `class` called Square that represents a square. I will also learn how to `instantiate` `objects` of this class and examine their attributes.
 
-* **2. Size validation**
-  * [2-square.py](./2-square.py): Python class `Square` that defines a square. Builds on
-  [1-square.py](./1-square.py) with:
-    * Instantiation with optional `size`: `def __init__(self, size=0):`
-  * If a provided `size` attribute is not an integer, a `TypeError` exception
-  is raised with the message `must be an integer`.
-  * If a provided `size` attribute is less than `0`, a `ValueError` exception
-  is raised with the message `size must be >= 0`.
+`Task 1`: Square with Size
+Define a class Square that includes a `private instance attribute` size. I will learn how to create objects with different attributes and access their values.
 
-* **3. Area of a square**
-  * [3-square.py](./3-square.py): Python class `Square` that defines a square. Builds on
-  [2-square.py](./2-square.py) with:
-    * Public instance attribute `def area(self):` that returns the current
-    square area.
+`Task 2`: Size Validation
+Enhance the Square class by adding `validation` for the size attribute. I will learn how to handle different cases and raise appropriate exceptions.
 
-* **4. Access and update private attribute**
-  * [4-square.py](./4-square.py): Python class `Square` that defines a square. Builds on
-  [3-square.py](./3-square.py) with:
-    * Property `def size(self):` to retrieve the private instance
-    attribute `self`.
-    * Property setter `def size(self, value):` to set `self`.
+`Task 3`: Area of a Square
+Add a method to the `Square class` that calculates and returns the area of the square. I will see how to define methods that perform computations based on attributes.
 
-* **5. Printing a square**
-  * [5-square.py](./5-square.py): Python class `Square` that defines a square. Builds on
-  [4-square.py](./4-square.py) with:
-    * Public instance method `def my_print(self):` that prints the square
-    with the character `#` to standard output (if `size` == 0 -> prints an empty
-    line).
+`Task 4`: Access and Update Private Attribute
+Expand the `Square class` with a `property` and a `setter` for the size attribute. I will explore how to control attribute assignments and ensure data integrity.
 
-* **6. Coordinates of a square**
-  * [6-square.py](./6-square.py): Python class `Square` that defines a square. Builds on
-  [5-square.py](./5-square.py) with:
-    * Private instance attribute `position`.
-    * Property `def position(self):` to retreive `position`.
-    * Property setter `def position(self, value):` to set `position`.
-    * Instantiation with optional `size` and `position`:
-    `def __init__(self, size=0, position=(0, 0)):`
-  * If a provided `position` attribute is not a tuple of two integers, a
-  `TypeError` exception is raised with the message `position must be a tuple of
-  2 positive integers`.
+`Task 5`: Printing a Square
+Implement a method `my_print()` in the `Square class` to print a square of a given size using the `'#' character`. I will learn how to create methods that manipulate attributes to achieve desired outputs.
 
-* **7. Singly linked list**
-  * [100-singly_linked_list.py](./100-singly_linked_list.py): Python classes `Node`
-  and `SinglyLinkedList` that define a node of a singly-linked list and a singly-linked
-  list. The class `Node` is defined with:
-    * Private instance attribute `data`.
-    * Property `def data(self):` to set `data`.
-    * Property setter `def data(self, value):` to set `data`.
-    * Private instance attribute `next_node`.
-    * Property `def next_node(self):` to set `next_node`.
-    * Property `def next_node(self, value):` to set `next_node`.
-    * Instantiation with `data` and `next_node`:
-    `def __init__(self, data, next_node=None):`
-  * If a provided `data` attribute is not an integer, a `TypeError`
-  exception is raised with the message `data must be an integer`.
-  * If a provided `next_node` attribute is not a `Node` or `None`, a
-  `TypeError` exception is raised with the message `next_node must be a
-  Node object`.
-  * The class `SinglyLinkedList` is defined with:
-    * Private instance attribute `head`.
-    * Instantiation `def __init__(self):`
-    * Public instance method `def sorted_insert(self, value):` that inserts a
-    new `Node` into the correct sorted position in the list increasing order).
+`Task 6`: Coordinates of a Square
+Extend the `Square class` with a position attribute that represents the position of the square when printed. I will implement methods to print a square with a specified position.
 
-* **8. Print Square instance**
-  * [101-square.py](./101-square.py): Python class `Square` that defines a square. Builds on
-  [6-square.py](./6-square.py) with:
-    * Method `__str__` to set printing of a `Square` instance equivalent to
-    `my_print()`.
+`Task 7`: Singly Linked List
+Create a class Node to define nodes of a singly linked list, and a class SinglyLinkedList to define the list structure. I will learn about linked lists and their components.
 
-* **9. Compare 2 squares**
-  * [102-square.py](./102-square.py): Python class `Square` that defines a square. Builds on
-  [101-square.py](./101-square.py) with:
-    * Methods `__eq__`, `__ne__`, `__lt__`, `__le__`, `__gt__`, and `__ge__`,
-    to enable usage of `Square` instances with logical operators `==`, `!=`, `<`,
-    `<=`, `>`, and `>=`, respectively, based on the square area.
+`Task 8`: Print Square Instance
+Enhance the Square class with a `__str__()` method to provide a string representation of the square when printed. I will explore how to customize the display of objects.
 
-* **10. ByteCode -> Python #5**
-  * [103-magic_class.py](./103-magic_class.py): Python function matching exactly a bytecode
-  provided by Holberton School.
+`Task 9`: Compare 2 Squares
+Expand the `Square class` by enabling it to be compared using comparison operators based on the area. I will learn about operator overloading.
+
+`Task 10`: `ByteCode -> Python #5`
+Create a class MagicClass that mimics the behavior of a given Python bytecode. This task will challenge my understanding of bytecode and how it corresponds to Python code.
+
+## Conclusion
+As I progress through these tasks, I'll gain a deeper understanding of Object-Oriented Programming in Python. Let's dive into each task, experiment with the concepts, and explore the exciting world of classes and objects!
