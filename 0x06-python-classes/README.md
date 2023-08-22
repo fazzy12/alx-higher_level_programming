@@ -60,7 +60,7 @@ By the end of this project, I will be able to explain the following concepts wit
 - Extend the `Square class` with a position attribute that represents the position of the square when printed. I will implement methods to print a square with a specified position.
 
 `Task 7`: Singly Linked List
-- Create a class Node to define nodes of a singly linked list, and a class SinglyLinkedList to define the list structure. I will learn about linked lists and their components.
+- Create a `class` Node to define nodes of a singly linked list, and a `class` SinglyLinkedList to define the list structure. I will learn about linked lists and their components.
 
 `Task 8`: Print Square Instance
 - Enhance the Square class with a `__str__()` method to provide a string representation of the square when printed. I will explore how to customize the display of objects.
