@@ -1,9 +1,4 @@
 #!/usr/bin/python3
-# 0-square.py
-# ifeanyi kalu
-"""Define a class Square."""
-
-
+"""This module defines a Square class"""
 class Square:
-    """Represent a square."""
     pass
