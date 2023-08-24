@@ -81,9 +81,11 @@ To participate in this curriculum, you need:
 
 Here are some resources you may find helpful:
 
-- [NumPy Documentation](https://numpy.org/doc/stable/)
-- [Unicode HOWTO](https://docs.python.org/3/howto/unicode.html)
-- [Python Unittest Documentation](https://docs.python.org/3/library/unittest.html)
+- [doctest — Test interactive Python examples (until “26.2.3.7. Warnings” included)](https://docs.python.org/3.4/library/doctest.html)
+- [doctest – Testing through documentation](https://pymotw.com/3/doctest/)
+- [Unit Tests in Python](https://www.youtube.com/watch?v=1Lfv5tUGsn8)
+- [Unittest module](https://www.youtube.com/watch?v=6tNS--WetLI)
+- [Interactive and Non-interactive tests](https://mattermost.com/blog/testing-python-understanding-doctest-and-unittest/)
 
 ## Contributing
 
