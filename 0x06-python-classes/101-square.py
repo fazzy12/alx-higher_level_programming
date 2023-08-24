@@ -53,13 +53,24 @@ class Square:
                 print(" " * self.__position[0], end="")
                 print("#" * self.__size)
 
+# def __str__(self):
+#     """Convert the square to a string for printing"""
+#     result = ""
+#     for _ in range(self.__position[1]):
+#         result += "\n"
+#     for _ in range(self.__size):
+#         result += " " * self.__position[0] + "#" * self.__size
+#         if _ < self.__size - 1:
+#             result += "\n"
+#     return result
+
+
 def __str__(self):
-    """Convert the square to a string for printing"""
-    result = ""
-    for _ in range(self.__position[1]):
-        result += "\n"
-    for _ in range(self.__size):
-        result += " " * self.__position[0] + "#" * self.__size
-        if _ < self.__size - 1:
-            result += "\n"
-    return result
+    """
+    defining printing behavior of the class
+    """
+    if self.__size == 0:
+        return ""
+    new_lines = '\n' * self.__position[1]
+    result = " " * self.__position[0] + "#" * self.__size
+    return new_lines + '\n'.join(result + "#" for e in range(self.__size))
