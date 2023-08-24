@@ -1,116 +1,98 @@
-# Python - Test-driven development
+<p align="center">
+  <img src="giphy-4.gif" alt="Background Image" width="100%" height="auto">
+</p>
 
-In this project, I started practicing test-driven development using `docstring`
-and `unittest` in Python.
 
-## Tests :heavy_check_mark:
+## Table of Contents
 
-* [tests](./tests): Folder of test files. Includes both Holberton-provided ones as well as the
-following eight independently-developed:
-  * [0-add_integer.txt](./tests/0-add_integer.txt)
-  * [2-matrix_divided.txt](./tests/2-matrix_divided.txt)
-  * [3-say_my_name.txt](./tests/3-say_my_name.txt)
-  * [4-print_square.txt](./tests/4-print_square.txt)
-  * [5-text_indentation.txt](./tests/text_indentation.txt)
-  * [6-max_integer_test.py](./tests/6-max_integer_test.py)
-  * [100-matrix_mul.txt](./tests/100-matrix_mul.txt)
-  * [101-lazy_matrix_mul.txt](./tests/101-lazy_matrix_mul.txt)
+- [Introduction](#introduction)
+- [Projects](#projects)
+- [Concepts](#concepts)
+- [Learning Objectives](#learning-objectives)
+- [Requirements](#requirements)
+- [Getting Started](#getting-started)
+- [Resources](#resources)
+- [Contributing](#contributing)
+- [License](#license)
 
-## Function Prototypes :floppy_disk:
+## Introduction
+This project focuses on introducing you to test-driven development and unit testing in Python. You'll learn how to write tests before writing code, ensuring the functionality and reliability of your software.
 
-Prototypes for functions written in this project:
+## Projects
 
-| File                     | Prototype                                    |
-| ------------------------ | -------------------------------------------- |
-| `0-add_integer.py`       | `def add_integer(a, b=98):`                  |
-| `2-matrix_divided.py`    | `def matrix_divided(matrix, div):`           |
-| `3-say_my_name.py`       | `def say_my_name(first_name, last_name=""):` |
-| `4-print_square.py`      | `def print_square(size):`                    |
-| `5-text_indentation.py`  | `def text_indentation(text):`                |
-| `100-matrix_mul.py`      | `def matrix_mul(m_a, m_b):`                  |
-| `101-lazy_matrix_mul.py` | `def lazy_matrix_mul(m_a, m_b):`             |
-| `102-python.c`           | `void print_python_string(PyObject *p);`     |
+### 0x07. Python - Test-driven development
+- **Technology:** Python
+- **Topics:** UnitTests, Test-Driven Development (TDD)
 
-## Tasks :page_with_curl:
 
-* **0. Integers addition**
-  * [0-add_integer.py](./0-add_integer.py): Python function that returns the integer addition
-  of two numbers.
-  * If either of `a` or `b` is not an `int` or `float`, a `TypeError` is raised
-  with the message `a must be an integer` or `b must be an integer`.
-  * If either of `a` or `b` is a `float`, it is casted to an `int`
-  before addition.
+1. Integers Addition
+2. Divide a Matrix
+3. Say My Name
+4. Print Square
+5. Text Indentation
+6. Max Integer - Unittest
+7. Matrix Multiplication
+8. Lazy Matrix Multiplication
+9. CPython #3: Python Strings
 
-* **1. Divide a matrix**
-  * [2-matrix_divided.py](./2-matrix_divided.py): Python function that divides all
-  elements of a matrix by a common divisor.
-  * Returns a new matrix representing the division of all elements of `matrix`
-  by `div`.
-  * Quotients are rounded to two decimal places.
-  * If `matrix` is not a list of lists of `int`s or `float`s, a `TypeError`
-  is raised with the message `matrix must be a matrix (list of lists) of
-  integers/floats`.
-  * If `matrix` contains rows of different lengths, a `TypeError` is raised
-  with the message `Each row of the matrix must have the same size`.
-  * If the divisor `div` is not an `int` or `float`, a `TypeError` is raised
-  with the message `div must be a number`.
-  * If `div` is `0`, a `ZeroDivisionError` is raised with the message
-  `division by zero`.
+Each project is designed to reinforce specific skills and concepts, helping you apply your learning in real-world scenarios.
 
-* **2. Say my name**
-  * [3-say_my_name.py](./3-say_my_name.py): Python function that prints a name in
-  the format `My name is <first_name> <last_name>`.
-  * If either of `first_name` or `last_name` is not a `str`, a `TypeError` is
-  raised with the message `first_name must be a string` or `last_name must be a
-  string`.
+## Concepts
 
-* **3. Print square**
-  * [4-print_square.py](./4-print_square.py): Python function that prints a square using
-  the `#` character.
-  * The paramter `size` represents the height/width of the square.
-  * If `size` is not an `int`, a `TypeError` is raised  with the message,
-  `size must be an integer`.
-  * If `size` is less than `0`, a `ValueError` is raised with the message `size
-  must be >= 0`.
+Throughout the curriculum, you'll explore key concepts, including:
 
-* **4. Text indentation**
-  * [5-text_indentation.py](./5-text_indentation.py): Python function that prints text with
-  indentation.
-  * Two new lines are printed after any `.`, `?`, or `:` character.
-  * If `text` is not a `str`, a `TypeError` is raised with the message `text
-  must be a string`.
-  * No spaces are printed at the beginning or end of each printed line.
+- Test-driven development (TDD)
+- Matrix operations and manipulation
+- Working with Python strings
+- Using the NumPy library
+- Writing and executing unit tests
+- Error handling and exception types
 
-* **5. Max integer - Unittest**
-  * [tests/6-max_integer_test.py](./tests/6-max_integer_text.py): Python class/script
-  that runs unittests for the function `def max_integer(list=[]):`
-  (provided by Holberton School).
+## Learning Objectives
 
-* **6. Matrix multiplication**
-  * [100-matrix_mul.py](./100-matrix_mul.py): Python function that multiplies two matrices.
-  * Returns a new matrix representing the multiplication of `m_a` by `m_b`.
-  * If either of `m_a` or `m_b` is empty (ie. `== []` or `== [[]]`), a
-  `ValueError` is raised with the message `m_a can't be empty` or `m_b can't
-  be empty`.
-  * If either of `m_a` or `m_b` is not a list, a `TypeError` is raised with
-  the message `m_a must be a list` or `m_b` must be a list.
-  * If either of `m_a` or `m_b` is not a list of lists, a `TypeError` is raised
-  with the message `m_a must be a list of lists` or `m_b must be a list of lists`.
-  * If either of `m_a` or `m_b` is not a list of lists of `int`s or `float`s, a
-  `TypeError` is raised with the message `m_a should contain only integers or
-  floats` or `m_b should contain only integers or floats`.
-  * If either of `m_a` or `m_b` contains rows of different lengths, a `TypeError`
-  is raised with the message `each row of m_a must should be of the same size` or
-  `each row of m_b must should be of the same size`.
-  * If `m_a` and `m_b` cannot be multiplied (ie. row size of `m_a` does not match
-  column size of `m_b`), a `ValueError` is raised with the message `m_a and m_b
-  can't be multiplied`.
+By completing this curriculum, you'll be able to:
 
-* **7. Lazy matrix multiplication**
-  * [101-lazy_matrix_mul.py](./101-lazy_matrix_mul.py): Python function that multiplies
-  two matrices using the module `NumPy`.
-  * Identical in function to [100-matrix_mul.py](./100-matrix_mul.py).
+- Understand the importance of test-driven development
+- Implement matrix operations and multiplication
+- Work with strings in Python, including Unicode characters
+- Utilize the NumPy library for matrix computations
+- Write comprehensive unit tests to validate code functionality
+- Handle errors and exceptions effectively in your code
 
-* **8. CPython #3: Python Strings**
-  * [102-python.c](./102-python.c): C function that prints basic information about Python
-  string objects.
+## Requirements
+
+To participate in this curriculum, you need:
+
+- Python 3.4 or later
+- The NumPy library (for certain projects)
+- A code editor (e.g., Visual Studio Code, PyCharm)
+- Git (for version control)
+- Basic familiarity with Python programming concepts
+
+## Getting Started
+
+1. Clone this repository to your local machine using `git clone`.
+2. Navigate to the project directory using the command line.
+3. Each project has its own directory. Navigate to the project you want to work on.
+4. Follow the project-specific README for instructions, requirements, and tests.
+5. Complete the tasks and projects according to the provided guidelines.
+
+## Resources
+
+Here are some resources you may find helpful:
+
+- [NumPy Documentation](https://numpy.org/doc/stable/)
+- [Unicode HOWTO](https://docs.python.org/3/howto/unicode.html)
+- [Python Unittest Documentation](https://docs.python.org/3/library/unittest.html)
+
+## Contributing
+
+Contributions to this curriculum are welcome! If you find any issues or improvements, please submit a pull request.
+
+## License
+
+This curriculum is released under the [MIT License](LICENSE).
+
+---
+
+Happy learning and coding!
