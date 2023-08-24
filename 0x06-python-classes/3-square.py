@@ -1,24 +1,19 @@
 #!/usr/bin/python3
-# 3-square.py
-# ifeanyi kalu
-"""Define a class Square."""
+""" This module defines a Square class"""
 
 
 class Square:
-    """Represent a square."""
-
+    """Square class"""
     def __init__(self, size=0):
-        """Initialize a new square.
-
-        Args:
-            size (int): The size of the new square.
-        """
-        if not isinstance(size, int):
+        """Initializes the data"""
+        if type(size) is not int:
             raise TypeError("size must be an integer")
         elif size < 0:
             raise ValueError("size must be >= 0")
-        self.__size = size
+        else:
+            self.__size = size
 
+    # calculate are of square
     def area(self):
-        """Return the current area of the square."""
-        return (self.__size * self.__size)
+        """Returns the current square area"""
+        return self.__size ** 2
