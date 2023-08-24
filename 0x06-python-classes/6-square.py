@@ -5,14 +5,14 @@
 class Square:
     """Square class"""
     def __init__(self, size=0, position=(0, 0)):
-        self.size = size
-        self.position = position
+        self.__size = size
+        self.__position = position
 
     # getter
     @property
     def size(self):
         """Retrieves the size"""
-        return self.size
+        return self.__size
 
     # setter
     @size.setter
@@ -23,18 +23,18 @@ class Square:
         elif value < 0:
             raise ValueError("size must be >= 0")
         else:
-            self.size = value
+            self.__size = value
 
     # calculate are of square
     def area(self):
         """Returns the current square area"""
-        return self.size ** 2
+        return self.__size ** 2
 
     # getter
     @property
     def position(self):
         """Return the position"""
-        return self.position
+        return self.__position
 
     # setter
     @position.setter
@@ -45,16 +45,17 @@ class Square:
            type(value[1]) is not int or value[1] < 0:
             raise TypeError("position must be a tuple of 2 positive integers")
         else:
-            self.position = value
+            self.__position = value
 
     # print square with position
     def my_print(self):
         """Prints in stdout the square with the character #"""
-        if self.size == 0:
+        if self.__size == 0:
             print()
         else:
-            for i in range(self.position[1]):
+            for _ in range(self.__position[1]):
                 print()
-            for i in range(self.size):
-                print(" " * self.position[0], end="")
-                print("#" * self.size)
+            for _ in range(self.__size):
+                print(" " * self.__position[0], end="")
+                print("#" * self.__size)
+
