@@ -47,62 +47,27 @@ class Square:
         """
         return self.__size ** 2
 
+
     def __eq__(self, other):
-        """
-        Compare two squares
-        Args:
-            other (Square): square to compare
-        Returns:
-            True if equal, False otherwise
-        """
+        """Compare if two squares have equal areas"""
         return self.area() == other.area()
 
     def __ne__(self, other):
-        """
-        Compare two squares
-        Args:
-            other (Square): square to compare
-        Returns:
-            True if not equal, False otherwise
-        """
+        """Compare if two squares have different areas"""
         return self.area() != other.area()
 
-    def __lt__(self, other):
-        """
-        Compare two squares
-        Args:
-            other (Square): square to compare
-        Returns:
-            True if less, False otherwise
-        """
-        return self.area() < other.area()
-
-    def __le__(self, other):
-        """
-        Compare two squares
-        Args:
-            other (Square): square to compare
-        Returns:
-            True if less or equal, False otherwise
-        """
-        return self.area() <= other.area()
-
     def __gt__(self, other):
-        """
-        Compare two squares
-        Args:
-            other (Square): square to compare
-        Returns:
-            True if greater, False otherwise
-        """
+        """Compare if the area of the first square is greater than the second"""
         return self.area() > other.area()
 
     def __ge__(self, other):
-        """
-        Compare two squares
-        Args:
-            other (Square): square to compare
-        Returns:
-            True if greater or equal, False otherwise
-        """
+        """Compare if the area of the first square is greater than or equal to the second"""
         return self.area() >= other.area()
+
+    def __lt__(self, other):
+        """Compare if the area of the first square is less than the second"""
+        return self.area() < other.area()
+
+    def __le__(self, other):
+        """Compare if the area of the first square is less than or equal to the second"""
+        return self.area() <= other.area()
