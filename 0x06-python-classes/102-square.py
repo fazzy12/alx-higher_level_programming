@@ -56,11 +56,13 @@ class Square:
         return self.area() != other.area()
 
     def __gt__(self, other):
-        """Compare if the area of the first square is greater than the second"""
+        """Compare if the area of the first square
+                is greater than the second"""
         return self.area() > other.area()
 
     def __ge__(self, other):
-        """Compare if the area of the first square is greater than or equal to the second"""
+        """Compare if the area of the first square is
+                greater than or equal to the second"""
         return self.area() >= other.area()
 
     def __lt__(self, other):
@@ -68,5 +70,6 @@ class Square:
         return self.area() < other.area()
 
     def __le__(self, other):
-        """Compare if the area of the first square is less than or equal to the second"""
+        """Compare if the area of the first square is
+                less than or equal to the second"""
         return self.area() <= other.area()
