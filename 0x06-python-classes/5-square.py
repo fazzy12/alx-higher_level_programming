@@ -1,41 +1,39 @@
 #!/usr/bin/python3
-# 5-square.py
-# ifeanyi kalu
-"""Define a class Square."""
+""" This module defines a Square class"""
 
 
 class Square:
-    """Represent a square."""
+    """Square class"""
+    def __init__(self, size=0):
+        self.__size = size
 
-    def __init__(self, size):
-        """Initialize a new square.
-
-        Args:
-            size (int): The size of the new square.
-        """
-        self.size = size
-
+    # getter
     @property
     def size(self):
-        """Get/set the current size of the square."""
-        return (self.__size)
+        """Retrieves the size"""
+        return self.__size
 
+    # setter
     @size.setter
     def size(self, value):
-        if not isinstance(value, int):
+        """Sets the size value"""
+        if type(value) is not int:
             raise TypeError("size must be an integer")
         elif value < 0:
             raise ValueError("size must be >= 0")
-        self.__size = value
+        else:
+            self.__size = value
 
+    # calculate are of square
     def area(self):
-        """Return the current area of the square."""
-        return (self.__size * self.__size)
+        """Returns the current square area"""
+        return self.__size ** 2
 
+    # print square
     def my_print(self):
-        """Print the square with the # character."""
-        for i in range(0, self.__size):
-            [print("#", end="") for j in range(self.__size)]
-            print("")
+        """Prints in stdout the square with the character #"""
         if self.__size == 0:
-            print("")
+            print()
+        else:
+            for i in range(self.__size):
+                print("#" * self.__size)
