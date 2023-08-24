@@ -1,16 +1,8 @@
 #!/usr/bin/python3
-# 1-square.py
-# ifeanyi kalu
-"""Define a class Square."""
-
+""" This module defines a Square class"""
 
 class Square:
-    """Represent a square."""
-
+    """Square class"""
     def __init__(self, size):
-        """Initialize a new Square.
-
-        Args:
-            size (int): The size of the new square.
-        """
+        """Initializes the data"""
         self.__size = size
