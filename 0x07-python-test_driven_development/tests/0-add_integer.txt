@@ -1,7 +1,5 @@
 # The rest of your module...
 
-# Adding more doctests
-"""
 Using `add_integer` with various scenarios
 -------------------------------------------
 
@@ -113,4 +111,3 @@ Case NaN:
     Traceback (most recent call last):
         ...
     ValueError: cannot convert float NaN to integer
-"""
