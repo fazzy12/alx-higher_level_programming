@@ -1,6 +1,7 @@
 #!/usr/bin/python3
 """This module adds two integers or floats together"""
 
+
 def add_integer(a, b=98):
     """
     This function adds two integers or floats together.
