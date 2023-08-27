@@ -1,36 +1,36 @@
 #!/usr/bin/python3
 """
-This module provides utility functions for working with text
-formatting and printing.
+
+Module composed by a function that prints 2 new lines after ".?:" characters
+
 """
 
 
 def text_indentation(text):
-    """Format a given text by adding two new lines after each '.', '?', or ':'.
+    """ Function that prints 2 new lines after ".?:" characters
 
-        Args:
-            text (str): The input text to be formatted.
+    Args:
+        text: input string
 
-        Returns:
-            None. The formatted text is printed.
+    Returns:
+        No return
 
-        Raises:
-            TypeError: If the input text is not a string.
+    Raises:
+        TypeError: If text is not a string
+
+
     """
-    if not isinstance(text, str):
+
+    if type(text) is not str:
         raise TypeError("text must be a string")
 
-    punctuation_chars = ".?:"
-    lines = []
-    line = ""
+    s = text[:]
 
-    for char in text:
-        line += char
-        if char in punctuation_chars:
-            lines.append(line.strip())
-            line = ""
+    for d in ".?:":
+        list_text = s.split(d)
+        s = ""
+        for i in list_text:
+            i = i.strip(" ")
+            s = i + d if s is "" else s + "\n\n" + i + d
 
-    lines.append(line.strip())
-
-    formatted_text = "\n\n".join(lines)
-    print(formatted_text)
+    print(s[:-3], end="")
