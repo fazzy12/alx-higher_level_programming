@@ -1,12 +1,9 @@
 #!/usr/bin/python3
 """
-    This module provides a function to print a formatted message with names.
-
-    The module contains a single function `say_my_name` that takes a first name
-    and an optional last name as parameters and prints a message using string
-    formatting. The function ensures that both names are provided as strings and
-    handles formatting accordingly.
+    This module provides a function to print a formatted
+    message with names.
 """
+
 
 def say_my_name(first_name, last_name=""):
     """
@@ -24,7 +21,6 @@ def say_my_name(first_name, last_name=""):
         TypeError: If either `first_name` or `last_name` is not a string.
 
     """
-
 
     if not isinstance(first_name, str):
         raise TypeError("first_name must be a string")
