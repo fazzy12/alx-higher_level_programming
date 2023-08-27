@@ -26,10 +26,13 @@ def matrix_divided(matrix, div):
     size_msg = "Each row of the matrix must have the same size"
     new_matrix = []
 
-    if any(not isinstance(num, (int, float)) for row in matrix for num in row):
+    if not isinstance(matrix, list) or\
+            any(not isinstance(row, list) for row in matrix) or\
+            any(not row for row in matrix):
         raise TypeError(matrix_msg)
 
-    if len(set(len(row) for row in matrix)) > 1:
+    row_lengths = set(len(row) for row in matrix)
+    if len(row_lengths) > 1:
         raise TypeError(size_msg)
 
     if not isinstance(div, (int, float)):
