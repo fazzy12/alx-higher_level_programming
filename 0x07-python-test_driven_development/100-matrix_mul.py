@@ -1,69 +1,86 @@
 #!/usr/bin/python3
-# 100-matrix_mul.py
-# ifeanyi kalu
-"""Defines a matrix multiplication function."""
+"""Module composed by a function that multiplies 2 matrices
+"""
 
 
 def matrix_mul(m_a, m_b):
-    """Multiply two matrices.
+    """
+    Multiplies two matrices.
 
     Args:
-        m_a (list of lists of ints/floats): The first matrix.
-        m_b (list of lists of ints/floats): The second matrix.
-    Raises:
-        TypeError: If either m_a or m_b is not a list of lists of ints/floats.
-        TypeError: If either m_a or m_b is empty.
-        TypeError: If either m_a or m_b has different-sized rows.
-        ValueError: If m_a and m_b cannot be multiplied.
+        m_a (list of lists): The first matrix.
+        m_b (list of lists): The second matrix.
+
     Returns:
-        A new matrix representing the multiplication of m_a by m_b.
+        list of lists: The resulting matrix after multiplication.
+
+    Raises:
+        TypeError: If m_a or m_b is not a list,
+            or if m_a or m_b is not a list of lists,
+            or if one element of the matrices is not an integer or float.
+        ValueError: If m_a or m_b is empty,
+            or if the matrices cannot be multiplied.
+
+    Note:
+        The matrices must meet certain requirements:
+        - Both m_a and m_b must be lists of lists.
+        - All elements of the matrices must be integers or floats.
+        - Each row of m_a must have the same size,
+        and each row of m_b must have the same size.
+        - The number of columns in m_a must be equal
+        to the number of rows in m_b for multiplication.
     """
 
-    if m_a == [] or m_a == [[]]:
-        raise ValueError("m_a can't be empty")
-    if m_b == [] or m_b == [[]]:
-        raise ValueError("m_b can't be empty")
+    be_list = "m_a must be a list or m_b must be a list"
+    listOfList = "m_a must be a list of lists or m_b must be a list of lists"
+    notEmpty = "m_a can't be empty or m_b can't be empty"
+    varTypes = "m_a should contain only integers or\
+        floats or m_b should contain only integers or floats"
+    sameSize = "each row of m_a must be of the same \
+        size or each row of m_b must be of the same size"
+    cantMul = "m_a and m_b can't be multiplied"
 
-    if not isinstance(m_a, list):
-        raise TypeError("m_a must be a list")
-    if not isinstance(m_b, list):
-        raise TypeError("m_b must be a list")
+    # both must be a list
+    if not isinstance(m_a, list) or not isinstance(m_b, list):
+        raise TypeError(be_list)
 
-    if not all(isinstance(row, list) for row in m_a):
-        raise TypeError("m_a must be a list of lists")
-    if not all(isinstance(row, list) for row in m_b):
-        raise TypeError("m_b must be a list of lists")
+    # both m_a and m_b must be a list of a list
+    if not all(isinstance(row, list) for row in m_a) or\
+            not all(isinstance(row, list) for row in m_b):
+        raise TypeError(listOfList)
 
-    if not all((isinstance(ele, int) or isinstance(ele, float))
-               for ele in [num for row in m_a for num in row]):
-        raise TypeError("m_a should contain only integers or floats")
-    if not all((isinstance(ele, int) or isinstance(ele, float))
-               for ele in [num for row in m_b for num in row]):
-        raise TypeError("m_b should contain only integers or floats")
+    # both m_a and m_b cant be empty
+    if len(m_a) == 0 or len(m_b) == 0:
+        raise ValueError(notEmpty)
 
-    if not all(len(row) == len(m_a[0]) for row in m_a):
-        raise TypeError("each row of m_a must should be of the same size")
-    if not all(len(row) == len(m_b[0]) for row in m_b):
-        raise TypeError("each row of m_b must should be of the same size")
+    # both m_a and m_b be ints or floats
+    a = any(not isinstance(num, (int, float)) for row in m_a for num in row)
+    b = any(not isinstance(num, (int, float)) for row in m_b for num in row)
 
-    if len(m_a[0]) != len(m_b):
-        raise ValueError("m_a and m_b can't be multiplied")
+    if a or b:
+        raise TypeError(varTypes)
 
-    inverted_b = []
-    for r in range(len(m_b[0])):
-        new_row = []
-        for c in range(len(m_b)):
-            new_row.append(m_b[c][r])
-        inverted_b.append(new_row)
+    # get length of both lists
+    num_columns_m_a = len(m_a[0])
+    num_columns_m_b = len(m_b[0])
 
-    new_matrix = []
-    for row in m_a:
-        new_row = []
-        for col in inverted_b:
-            prod = 0
-            for i in range(len(inverted_b[0])):
-                prod += row[i] * col[i]
-            new_row.append(prod)
-        new_matrix.append(new_row)
+    # rows must be of the same size
+    if not all(len(row) == num_columns_m_a for row in m_a) or\
+            not all(len(row) == num_columns_m_b for row in m_b):
+        raise ValueError(sameSize)
 
-    return new_matrix
+    # check if rows can  be multiplied
+    if num_columns_m_a != len(m_b):
+        raise ValueError(cantMul)
+
+    result = []
+    for i in range(len(m_a)):
+        row = []
+        for j in range(len(m_b[0])):
+            element = 0
+            for k in range(len(m_b)):
+                element += m_a[i][k] * m_b[k][j]
+            row.append(element)
+        result.append(row)
+
+    return result
