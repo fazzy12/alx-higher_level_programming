@@ -4,7 +4,7 @@
 
 
 def matrix_mul(m_a, m_b):
-    """ Function that multiplies 2 matrices
+    """Function that multiplies 2 matrices
 
     Args:
         m_a: matrix a
@@ -78,7 +78,7 @@ def matrix_mul(m_a, m_b):
         r2 = []
         i2 = 0
         num = 0
-        while (i2 < len(m_b[0])):
+        while i2 < len(m_b[0]):
             num += a[i1] * m_b[i1][i2]
             if i1 == len(m_b) - 1:
                 i1 = 0
