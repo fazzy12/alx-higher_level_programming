@@ -28,7 +28,7 @@ def matrix_mul(m_a, m_b):
         - Each row of m_a must have the same size,
         and each row of m_b must have the same size.
         - The number of columns in m_a must be equal
-        to the number of rows in m_b for multiplication.
+        to the number of rows in m_b for multiplication
     """
 
     be_list = "m_a must be a list or m_b must be a list"
