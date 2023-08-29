@@ -34,10 +34,10 @@ def matrix_mul(m_a, m_b):
     be_list = "m_a must be a list or m_b must be a list"
     listOfList = "m_a must be a list of lists or m_b must be a list of lists"
     notEmpty = "m_a can't be empty or m_b can't be empty"
-    varTypes = "m_a should contain only integers or\
-        floats or m_b should contain only integers or floats"
-    sameSize = "each row of m_a must be of the same \
-        size or each row of m_b must be of the same size"
+    varTypes1 = "m_a should contain only integers or"
+    varTypes2 = "floats or m_b should contain only integers or floats"
+    sameSize1 = "each row of m_a must be of the same"
+    sameSize2 = "size or each row of m_b must be of the same size"
     cantMul = "m_a and m_b can't be multiplied"
 
     # both must be a list
@@ -58,7 +58,7 @@ def matrix_mul(m_a, m_b):
     b = any(not isinstance(num, (int, float)) for row in m_b for num in row)
 
     if a or b:
-        raise TypeError(varTypes)
+        raise TypeError(varTypes1 + " " + varTypes2)
 
     # get length of both lists
     num_columns_m_a = len(m_a[0])
@@ -67,7 +67,7 @@ def matrix_mul(m_a, m_b):
     # rows must be of the same size
     if not all(len(row) == num_columns_m_a for row in m_a) or\
             not all(len(row) == num_columns_m_b for row in m_b):
-        raise ValueError(sameSize)
+        raise ValueError(sameSize1 + " " + sameSize2)
 
     # check if rows can  be multiplied
     if num_columns_m_a != len(m_b):
