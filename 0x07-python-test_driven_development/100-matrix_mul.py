@@ -4,83 +4,89 @@
 
 
 def matrix_mul(m_a, m_b):
-    """
-    Multiplies two matrices.
+    """ Function that multiplies 2 matrices
 
     Args:
-        m_a (list of lists): The first matrix.
-        m_b (list of lists): The second matrix.
+        m_a: matrix a
+        m_b: matrix b
 
     Returns:
-        list of lists: The resulting matrix after multiplication.
+        result of the multiplication
 
     Raises:
-        TypeError: If m_a or m_b is not a list,
-            or if m_a or m_b is not a list of lists,
-            or if one element of the matrices is not an integer or float.
-        ValueError: If m_a or m_b is empty,
-            or if the matrices cannot be multiplied.
+        TypeError: if m_a or m_b aren't a list
+        TypeError: if m_a or m_b aren't a list of a lists
+        ValueError: if m_a or m_b are empty
+        TypeError: if the lists of m_a or m_b don't have integers or floats
+        TypeError: if the rows of m_a or m_b don't have the same size
+        ValueError: if m_a and m_b can't be multiplied
 
-    Note:
-        The matrices must meet certain requirements:
-        - Both m_a and m_b must be lists of lists.
-        - All elements of the matrices must be integers or floats.
-        - Each row of m_a must have the same size,
-        and each row of m_b must have the same size.
-        - The number of columns in m_a must be equal
-        to the number of rows in m_b for multiplication
+
     """
 
-    be_list = "m_a must be a list or m_b must be a list"
-    listOfList = "m_a must be a list of lists or m_b must be a list of lists"
-    notEmpty = "m_a can't be empty or m_b can't be empty"
-    varTypes1 = "m_a should contain only integers or"
-    varTypes2 = "floats or m_b should contain only integers or floats"
-    sameSize1 = "each row of m_a must be of the same"
-    sameSize2 = "size or each row of m_b must be of the same size"
-    cantMul = "m_a and m_b can't be multiplied"
+    if not isinstance(m_a, list):
+        raise TypeError("m_a must be a list")
 
-    # both must be a list
-    if not isinstance(m_a, list) or not isinstance(m_b, list):
-        raise TypeError(be_list)
+    if not isinstance(m_b, list):
+        raise TypeError("m_b must be a list")
 
-    # both m_a and m_b must be a list of a list
-    if not all(isinstance(row, list) for row in m_a) or\
-            not all(isinstance(row, list) for row in m_b):
-        raise TypeError(listOfList)
+    for elems in m_a:
+        if not isinstance(elems, list):
+            raise TypeError("m_a must be a list of lists")
 
-    # both m_a and m_b cant be empty
-    if len(m_a) == 0 or len(m_b) == 0:
-        raise ValueError(notEmpty)
+    for elems in m_b:
+        if not isinstance(elems, list):
+            raise TypeError("m_b must be a list of lists")
 
-    # both m_a and m_b be ints or floats
-    a = any(not isinstance(num, (int, float)) for row in m_a for num in row)
-    b = any(not isinstance(num, (int, float)) for row in m_b for num in row)
+    if len(m_a) == 0 or (len(m_a) == 1 and len(m_a[0]) == 0):
+        raise ValueError("m_a can't be empty")
 
-    if a or b:
-        raise TypeError(varTypes1 + " " + varTypes2)
+    if len(m_b) == 0 or (len(m_b) == 1 and len(m_b[0]) == 0):
+        raise ValueError("m_b can't be empty")
 
-    # get length of both lists
-    num_columns_m_a = len(m_a[0])
-    num_columns_m_b = len(m_b[0])
+    for lists in m_a:
+        for elems in lists:
+            if not type(elems) in (int, float):
+                raise TypeError("m_a should contain only integers or floats")
 
-    # rows must be of the same size
-    if not all(len(row) == num_columns_m_a for row in m_a) or\
-            not all(len(row) == num_columns_m_b for row in m_b):
-        raise ValueError(sameSize1 + " " + sameSize2)
+    for lists in m_b:
+        for elems in lists:
+            if not type(elems) in (int, float):
+                raise TypeError("m_b should contain only integers or floats")
 
-    # check if rows can  be multiplied
-    if num_columns_m_a != len(m_b):
-        raise ValueError(cantMul)
+    length = 0
 
-    result = []
-    for i in range(len(m_a)):
-        row = []
-        for j in range(len(m_b[0])):
-            element = 0
-            for k in range(len(m_b)):
-                element += m_a[i][k] * m_b[k][j]
-            row.append(element)
-        result.append(row)
+    for elems in m_a:
+        if length != 0 and length != len(elems):
+            raise TypeError("each row of m_a must be of the same size")
+        length = len(elems)
 
-    return result
+    length = 0
+
+    for elems in m_b:
+        if length != 0 and length != len(elems):
+            raise TypeError("each row of m_b must be of the same size")
+        length = len(elems)
+
+    if len(m_a[0]) != len(m_b):
+        raise ValueError("m_a and m_b can't be multiplied")
+
+    r1 = []
+    i1 = 0
+
+    for a in m_a:
+        r2 = []
+        i2 = 0
+        num = 0
+        while (i2 < len(m_b[0])):
+            num += a[i1] * m_b[i1][i2]
+            if i1 == len(m_b) - 1:
+                i1 = 0
+                i2 += 1
+                r2.append(num)
+                num = 0
+            else:
+                i1 += 1
+        r1.append(r2)
+
+    return r1
