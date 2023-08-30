@@ -1,6 +1,5 @@
-#!/usr/bin/python3
-"""
-Module for matrix multiplication using NumPy.
+#!/usr/bin/python3.5
+"""Module for matrix multiplication using NumPy.
 """
 import numpy as np
 
@@ -15,11 +14,5 @@ def lazy_matrix_mul(m_a, m_b):
 
     Returns:
         numpy.ndarray: The resulting matrix after multiplication.
-
-    Raises:
-        ValueError: If m_a or m_b is empty,
-            or if the matrices cannot be multiplied.
     """
-
-    result = np.matmul(m_a, m_b)
-    return result
+    return (np.matmul(m_a, m_b))
