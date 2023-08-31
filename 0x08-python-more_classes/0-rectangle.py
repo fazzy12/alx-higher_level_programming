@@ -5,7 +5,6 @@ a geometric rectangle.
 
 Classes:
     Rectangle: A geometric shape with width and height properties.
-    
 
 Attributes:
     width (int): The width of the rectangle.
@@ -23,7 +22,6 @@ Raises:
     TypeError: If width or height is not an integer.
     ValueError: If width or height is less than 0.
 """
-
 
 
 class Rectangle:
