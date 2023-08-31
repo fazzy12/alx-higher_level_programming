@@ -68,7 +68,7 @@ class Rectangle:
         """
         Getter method to retrieve the height of the rectangle.
         """
-        return self._height
+        return self.__height
 
     @height.setter
     def height(self, value):
@@ -88,4 +88,4 @@ class Rectangle:
         if value < 0:
             raise ValueError("height must be >= 0")
 
-        self._height = value
+        self.__height = value
