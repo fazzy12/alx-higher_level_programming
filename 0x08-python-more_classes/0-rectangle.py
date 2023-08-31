@@ -1,7 +1,7 @@
 #!/usr/bin/python3
 """
-This module contains the definition of the Rectangle class,
-which serves as a blueprint for creating rectangle objects.
+This module defines the Rectangle class, which represents
+a geometric rectangle.
 """
 
 
