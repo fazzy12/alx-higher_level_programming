@@ -1,5 +1,5 @@
 <div style="width: 100%; height: 0; padding-bottom: 100%; position: relative;">
-    <img src="everything.jpg" alt="OOP Image" style="position: absolute; width: 100%; height: 30%; object-fit: cover;">
+    <img src="everything.jpg" alt="OOP Image" style="position: absolute; width: 100%; height: 5%; object-fit: cover;">
 </div>
 
 # Python - Everything is an Object
