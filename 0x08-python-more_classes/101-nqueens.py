@@ -3,6 +3,7 @@
 """
 import sys
 
+
 def is_safe(board, row, col, N):
     """
     Check if it's safe to place a queen at the specified position.
@@ -30,6 +31,7 @@ def is_safe(board, row, col, N):
 
     return True
 
+
 def solve_n_queens(N):
     """
     Solve the N Queens problem and return a list of solutions.
@@ -38,7 +40,8 @@ def solve_n_queens(N):
         N (int): The size of the chessboard.
 
     Returns:
-        list: A list of solutions, where each solution is a list of queen positions.
+        list: A list of solutions, where each solution
+        is a list of queen positions.
     """
     board = [[0 for _ in range(N)] for _ in range(N)]
     solutions = []
@@ -57,6 +60,7 @@ def solve_n_queens(N):
     solve(0)
     return solutions
 
+
 def main():
     """
     Entry point of the program.
@@ -64,7 +68,7 @@ def main():
     if len(sys.argv) != 2:
         print("Usage: nqueens N")
         sys.exit(1)
-    
+
     try:
         N = int(sys.argv[1])
         if N < 4:
@@ -76,6 +80,7 @@ def main():
     except ValueError:
         print("N must be a number")
         sys.exit(1)
+
 
 if __name__ == "__main__":
     main()
