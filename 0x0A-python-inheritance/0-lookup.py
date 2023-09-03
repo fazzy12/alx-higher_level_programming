@@ -1,9 +1,7 @@
 #!/usr/bin/python3
-# 0-lookup.py
-# ifeanyi kalu
 """Defines an object attribute lookup function."""
 
 
 def lookup(obj):
-    """Return a list of an object's available attributes."""
+    """Returns list of objects in the atrributes"""
     return (dir(obj))
