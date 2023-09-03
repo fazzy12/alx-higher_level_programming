@@ -1,5 +1,5 @@
 <div style="width: 100%; height: 0; padding-bottom: 100%; position: relative;">
-    <img src="Inheritance.png" alt="OOP Image" style="position: absolute; width: 80%; height: 100%; object-fit: cover;">
+    <img src="Inheritance.png" alt="OOP Image" style="position: absolute; width: 100%; height: 100%; object-fit: cover;">
 </div>
 
 # Python - Inheritance
