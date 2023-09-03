@@ -123,5 +123,15 @@ Function prototypes for this project:
 
 These Python scripts can be executed as standalone programs or imported as modules into other Python scripts for use. To run a script, you can use the following command in your terminal:
 
-```bash
+```
 python script_name.py
+```
+
+For example, to run the 0-lookup.py script, you can use the following command:
+
+```
+python 0-lookup.py
+```
+
+## Author
+[Ifeanyi kalu](https://github.com/fazzy12) - [LinkedIn](htttps://linkedin.com/in/ifeanyi-kalu)
