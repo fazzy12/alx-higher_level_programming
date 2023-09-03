@@ -134,5 +134,4 @@ python 0-lookup.py
 ```
 
 ## Author
-[Ifeanyi kalu](https://github.com/fazzy12) 
-[LinkedIn](htttps://linkedin.com/in/ifeanyi-kalu)
+[Ifeanyi kalu](https://github.com/fazzy12) - [LinkedIn](https://linkedin.com/in/ifeanyi-kalu)
