@@ -1,19 +1,19 @@
 #!/usr/bin/python3
-# 4-inherits_from.py
-# ifeanyi kalu
-"""Defines an inherited class-checking function."""
+"""This module checks if s subclass was inherited from a class
+"""
 
 
 def inherits_from(obj, a_class):
-    """Checks if an object is an inherited instance of a class.
+    """Check if 'obj' is an instance of a class that inherits from 'a_class'.
 
     Args:
-        obj (any): The object to check.
-        a_class (type): The class to match the type of obj to.
+        obj: The object to check.
+        a_class: The class to compare against.
+
     Returns:
-        If obj is an inherited instance of a_class - True.
-        Otherwise - False.
+        True if 'obj' is an instance of a class that inherits from 'a_class',
+        otherwise False.
     """
-    if issubclass(type(obj), a_class) and type(obj) != a_class:
+    if issubclass(isinstance(obj), a_class) and isinstance(obj) != a_class:
         return True
     return False
