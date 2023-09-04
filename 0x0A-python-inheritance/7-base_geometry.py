@@ -1,27 +1,41 @@
 #!/usr/bin/python3
-# 7-base_geometry.py
-# ifeanyi kalu
-"""Defines a base geometry class BaseGeometry."""
+"""
+This module defines a base class for geometry-related operations.
+"""
 
 
 class BaseGeometry:
-    """Reprsent base geometry."""
+    """
+    A base class for geometry-related operations.
+
+    This class defines an 'area' method that raises an exception with
+    the message 'area() is not implemented.' Subclasses are expected
+    to override this method with their own implementations.
+
+    Attributes:
+        None.
+
+    Methods:
+        area(): An abstract method that raises an Exception
+        with the message 'area() is not implemented.'
+    """
 
     def area(self):
-        """Not yet implemented."""
+        """Raise an Exception with the message 'area() is not implemented'."""
         raise Exception("area() is not implemented")
 
     def integer_validator(self, name, value):
-        """Validate a parameter as an integer.
+        """Validate an integer value.
 
         Args:
-            name (str): The name of the parameter.
-            value (int): The parameter to validate.
+            name (str): The name of the value being validated.
+            value: The value to be validated.
+
         Raises:
-            TypeError: If value is not an integer.
-            ValueError: If value is <= 0.
+            TypeError: If 'value' is not an integer.
+            ValueError: If 'value' is less than or equal to 0.
         """
-        if type(value) != int:
-            raise TypeError("{} must be an integer".format(name))
+        if not isinstance(value, int):
+            raise TypeError(f"{name} must be an integer")
         if value <= 0:
-            raise ValueError("{} must be greater than 0".format(name))
+            raise ValueError(f"{name} must be greater than 0")
