@@ -1,19 +1,13 @@
 #!/usr/bin/python3
-# 3-is_kind_of_class.py
-# ifeanyi kalu
-"""Defines a class and inherited class-checking function."""
-
-
 def is_kind_of_class(obj, a_class):
-    """Check if an object is an instance or inherited instance of a class.
+    """Check if 'obj' is an instance of, or inherits from, 'a_class'.
 
     Args:
-        obj (any): The object to check.
-        a_class (type): The class to match the type of obj to.
+        obj: The object to check.
+        a_class: The class to compare against.
+
     Returns:
-        If obj is an instance or inherited instance of a_class - True.
-        Otherwise - False.
+        True if 'obj' is an instance of 'a_class' or inherits from it,
+        otherwise False.
     """
-    if isinstance(obj, a_class):
-        return True
-    return False
+    return isinstance(obj, a_class)
