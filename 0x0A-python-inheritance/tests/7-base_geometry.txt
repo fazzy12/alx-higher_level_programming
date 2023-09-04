@@ -34,3 +34,53 @@ ValueError: side_length must be greater than 0
 Traceback (most recent call last):
 ...
 Exception: area() is not implemented
+
+# Additional test cases for the BaseGeometry class
+
+# Create a new instance of the BaseGeometry class
+>>> geometry2 = BaseGeometry()
+
+# Validate a positive integer value (should not raise an exception)
+>>> geometry2.integer_validator("height", 10)
+
+# Try to validate a non-integer value (should raise a TypeError)
+>>> geometry2.integer_validator("width", "abc")
+Traceback (most recent call last):
+...
+TypeError: width must be an integer
+
+# Try to validate a non-positive integer value (should raise a ValueError)
+>>> geometry2.integer_validator("depth", -3)
+Traceback (most recent call last):
+...
+ValueError: depth must be greater than 0
+
+# Try to calculate the area (should raise an Exception)
+>>> geometry2.area()
+Traceback (most recent call last):
+...
+Exception: area() is not implemented
+
+# Create another instance of the BaseGeometry class
+>>> geometry3 = BaseGeometry()
+
+# Validate a positive integer value (should not raise an exception)
+>>> geometry3.integer_validator("side_length", 15)
+
+# Try to validate a non-integer value (should raise a TypeError)
+>>> geometry3.integer_validator("radius", 3.5)
+Traceback (most recent call last):
+...
+TypeError: radius must be an integer
+
+# Try to validate a non-positive integer value (should raise a ValueError)
+>>> geometry3.integer_validator("angle", 0)
+Traceback (most recent call last):
+...
+ValueError: angle must be greater than 0
+
+# Try to calculate the area (should raise an Exception)
+>>> geometry3.area()
+Traceback (most recent call last):
+...
+Exception: area() is not implemented
