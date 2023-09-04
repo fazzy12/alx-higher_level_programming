@@ -1,19 +1,34 @@
 #!/usr/bin/python3
-# 11-square.py
-# ifeanyi kalu
-"""Defines a Rectangle subclass Square."""
-Rectangle = __import__('9-rectangle').Rectangle
+"""Module containing the `Rectangle` class inheriting
+from `BaseGeometry` class."""
+Rectangle = __import__("9-rectangle").Rectangle
 
 
 class Square(Rectangle):
-    """Represent a square."""
+    """A class representing a square, inheriting from Rectangle.
+
+    Attributes:
+        None (size is a private attribute).
+
+    Args:
+        size (int): The size of the square.
+
+    Raises:
+        TypeError: If size is not a positive integer.
+
+    Note:
+        The Square class inherits from Rectangle and enforces
+        positive integer validation for size. The square is a special case
+        of a rectangle where the width and height are equal.
+    """
 
     def __init__(self, size):
-        """Initialize a new square.
-
-        Args:
-            size (int): The size of the new square.
-        """
+        """Initialize a Square instance with a given size."""
+        # Validate size as a positive integer
         self.integer_validator("size", size)
         super().__init__(size, size)
         self.__size = size
+
+    def __str__(self):
+        """Return a string representation of a Square instance."""
+        return "[Square] {}/{}".format(self.__size, self.__size)
