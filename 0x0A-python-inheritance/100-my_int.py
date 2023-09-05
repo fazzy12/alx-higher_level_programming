@@ -1,16 +1,43 @@
 #!/usr/bin/python3
-# 100-my_int.py
-# ifeanyi kalu
-"""Defines a class MyInt that inherits from int."""
+"""Module containing the `MyInt` class inheriting from `int` class."""
 
 
 class MyInt(int):
-    """Invert int operators == and !=."""
+    """A custom integer class with inverted equality and inequality operators.
 
-    def __eq__(self, value):
-        """Override == opeartor with != behavior."""
-        return self.real != value
+    This class inherits from the built-in `int` class but changes the behavior
+    of the equality (==) and inequality (!=) operators. When comparing
+    instances of `MyInt`, these operators return inverted results compared
+    to standard integers.
 
-    def __ne__(self, value):
-        """Override != operator with == behavior."""
-        return self.real == value
+    Attributes:
+        None
+
+    Methods:
+        __eq__(self, other): Override the equality operator (==) to return the
+        inverted result.
+        __ne__(self, other): Override the inequality operator (!=) to return
+        the inverted result.
+    """
+
+    def __eq__(self, other):
+        """Override the equality operator (==) to return the inverted result.
+
+        Args:
+            other (int or MyInt): The object to compare with.
+
+        Returns:
+            bool: True if the objects are not equal, False otherwise.
+        """
+        return super().__ne__(other)
+
+    def __ne__(self, other):
+        """Override the inequality operator (!=) to return the inverted result.
+
+        Args:
+            other (int or MyInt): The object to compare with.
+
+        Returns:
+            bool: True if the objects are equal, False otherwise.
+        """
+        return super().__eq__(other)
