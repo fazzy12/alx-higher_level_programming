@@ -1,16 +1,80 @@
-# Python - Input/Output
 
-In this project, I practiced file handling in Python. I used the builtin `with`,
-`open`, and `read` functions with the `json` module to read and write files and
-serialize and deserialize objects with JSON.
 
-## Tests :heavy_check_mark:
+<div style="width: 100%; height: 0; padding-bottom: 100%; position: relative;">
+    <img src="file.jpg" alt="OOP Image" style="position: absolute; width: 100%; height: 100%; object-fit: cover;">
+</div>
+# ALX Higher-Level Programming - Python Input/Output
 
-* [tests](./tests): Folder of test files. Provided by Holberton School.
+This repository contains Python scripts and classes designed to cover various input/output operations and concepts in Python programming. The project is part of the ALX Higher-Level Programming curriculum, specifically under the section "Python Input/Output."
 
-## Function Prototypes :floppy_disk:
+## Table of Contents
+
+- [Description](#description)
+- [Curriculum](#curriculum)
+- [Learning Objectives](#learning-objectives)
+- [Requirements](#requirements)
+- [Function-Prototypes](#Function-Prototypes)
+- [Tasks](#tasks)
+  1. [Read File](#1-read-file)
+  2. [Write to a File](#2-write-to-a-file)
+  3. [Append to a File](#3-append-to-a-file)
+  4. [To JSON String](#4-to-json-string)
+  5. [From JSON String to Object](#5-from-json-string-to-object)
+  6. [Save Object to a File](#6-save-object-to-a-file)
+  7. [Create Object from a JSON File](#7-create-object-from-a-json-file)
+  8. [Class to JSON](#8-class-to-json)
+  9. [Student to JSON](#9-student-to-json)
+  10. [Student to JSON with Filter](#10-student-to-json-with-filter)
+  11. [Student to Disk and Reload](#11-student-to-disk-and-reload)
+  12. [Pascal's Triangle](#12-pascals-triangle)
+  13. [Search and Update](#13-search-and-update)
+  14. [Log Parsing](#14-log-parsing)
+
+## Description
+
+This project focuses on developing Python scripts and classes that handle various input/output operations. These operations include reading and writing to files, serialization to JSON, and more. The tasks within this project serve as practical exercises to reinforce your understanding of these concepts.
+
+## Curriculum
+
+- **SE Foundations**: This project contributes to the ALX Higher-Level Programming curriculum, specifically in the area of Python input and output operations.
+
+## Learning Objectives
+
+By completing the tasks in this project, you will gain knowledge and practical experience in the following areas:
+
+- Understanding Python's input and output mechanisms
+- Working with files in Python
+- Serialization and deserialization of Python data structures to/from JSON
+- Object-oriented programming in Python
+- Python class implementation and methods
+- Handling exceptions and file operations
+
+## Requirements
+
+### Python Scripts
+
+- **Allowed Editors**: vi, vim, emacs
+- **Python Version**: Python 3.8.5 (Ubuntu 20.04 LTS)
+- **Code Style**: Your code should follow the PEP 8 code style guidelines.
+- **Executable Files**: All your Python files must be executable.
+- **File Endings**: All your files should end with a new line.
+- **Shebang**: The first line of all your Python files should be exactly `#!/usr/bin/python3`.
+- **README.md**: A `README.md` file, located at the root of the project folder, is mandatory.
+
+### Python Test Cases
+
+- **Allowed Editors**: vi, vim, emacs
+- **File Endings**: All your test files should end with a new line.
+- **Test Folder**: All your test files should be inside a folder named `tests`.
+- **Test File Format**: All your test files should be text files with the extension `.txt`.
+- **Test Execution**: All your tests should be executed by using the command: `python3 -m doctest ./tests/*`
+- **Documentation**: All your modules, classes, and functions should have proper documentation strings.
+
+## Function-Prototypes
 
 Prototypes for functions written in this project:
+
+* [tests](./tests): Folder of test files. Provided by Alx School.
 
 | File        | Prototype               |
 | ----------- | ----------------------- |
@@ -26,103 +90,83 @@ Prototypes for functions written in this project:
 | `10-class_to_json.py` | `def class_to_json(obj):` |
 | `14-pascal_triangle.py` | `def pascal_triangle(n):` |
 | `100-append_after.py` | `def append_after(filename="", search_string="", new_string=""):` |
+## Tasks
 
-## Tasks :page_with_curl:
+### 1. Read File
 
-* **0. Read file**
-  * [0-read_file.py](./0-read_file.py): Python function that prints the contents of a UTF8 text
-  file to standard output.
+- Prototype: `def read_file(filename=""):`
+- This task involves writing a function that reads a text file (UTF8) and prints its content to stdout. The function must use the `with` statement and should not import any modules.
+- The provided `read_file` function should be used for testing.
 
-* **1. Number of lines**
-  * [1-number_of_lines.py](./1-number_of_lines.py): Python function that returns the number of lines
-  contained in a text file.
+### 2. Write to a File
 
-* **2. Read n lines**
-  * [2-read_lines.py](./2-read_lines.py): Python function that prints `n` lines of a UTF8 text
-  file to standard output.
+- Prototype: `def write_file(filename="", text=""):`
+- In this task, you need to create a function that writes a string to a text file (UTF8) and returns the number of characters written. The function should use the `with` statement and create the file if it doesn't exist. It should also overwrite the content of the file if it already exists. No module imports are allowed.
 
-* **3. Write to a file**
-  * [3-write_file.py](./3-write_file.py): Python function that writes a string to a UTF8 text
-  file and returns the number of characters written.
+### 3. Append to a File
 
-* **4. Append to a file**
-  * [4-append_write.py](./4-append_write.py): Python function that appends a string to the end of a
-  UTF8 text file and returns the number of characters appended.
+- Prototype: `def append_write(filename="", text=""):`
+- Write a function that appends a string at the end of a text file (UTF8) and returns the number of characters added. If the file doesn't exist, it should be created. The function should use the `with` statement and not import any modules.
 
-* **5. To JSON string**
-  * [5-to_json_string.py](./5-to_json_string.py): Python function that returns the JSON string
-  representation of an object.
+### 4. To JSON String
 
-* **6. From JSON string to Object**
-  * [6-from_json_string.py](./6-from_json_string.py): Python function that returns the Python object
-  represented by a JSON string.
+- Prototype: `def to_json_string(my_obj):`
+- Create a function that returns the JSON representation (string) of an object. You don't need to manage exceptions if the object can't be serialized. You can assume that the object will always be a valid JSON object.
 
-* **7. Save Object to a file**
-  * [7-save_to_json_file.py](./7-save_to_json_file.py): Python function that writes an object to a text
-  file using JSON representation.
+### 5. From JSON String to Object
 
-* **8. Create object from a JSON file**
-  * [8-load_from_json_file.py](./8-load_from_json_file.py): Python function that creates an object from a
-  `.json` file.
+- Prototype: `def from_json_string(my_str):`
+- Implement a function that returns an object (Python data structure) represented by a JSON string. You can assume that the JSON string will always be valid.
 
-* **9. Load, add, save**
-  * [9-add_item.py](./9-add_item.py): Python script that stores all command line arguments to a
-  Python list saved in the file `add_item.json`.
+### 6. Save Object to a File
 
-* **10. Class to JSON**
-  * [10-class_to_json.py](./10-class_to_json.py): Python function that returns the dictionary
-  description for simple Python data structures (lists, dictionaries, strings,
-  integers and booleans).
+- Prototype: `def save_to_json_file(my_obj, filename=""):`
+- Write a function that writes the JSON representation of an object to a text file (UTF8). The object can be any valid JSON object. The function should use the `with` statement and create the file if it doesn't exist, or overwrite the content if it already exists. No module imports are allowed.
 
-* **11. Student to JSON**
-  * [11-student.py](./11-student.py): Python class `Student` that defines a student. Includes:
-    * Public instance attributes `first_name`, `last_name`, and `age`.
-    * Instantiation with `first_name`, `last_name`, and `age`:
-    `def __init__(self, first_name, last_name, age):`.
-    * Public method `def to_json(self):` that returns the dictionary
-    representation of a `Student` instance.
+### 7. Create Object from a JSON File
 
-* **12. Student to JSON with filter**
-  * [12-student.py](./12-student.py): Python class `Student` that defines a student. Builds on
-  [11-student.py](./11-student.py) with:
-    * Public method `def to_json(self, attrs=None):` that returns the
-    dictionary representation of a `Student` instance.
-    * If `attrs` is a list of strings, only the attributes listed are
-    represented in the dictionary.
+- Prototype: `def load_from_json_file(filename=""):`
+- Implement a function that creates an object from a JSON file. The function should return the created object. If the file doesn't exist, or if the JSON content is not valid, the function should return an empty object (dictionary `{}`).
 
-* **13. Student to disk and reload**
-  * [13-student.py](./13-student.py): Python class `Student` that defines a student. Builds on
-  [12-student.py](./12-student.py) with:
-    * Public method `def reload_from_json(self, json):` that replaces all
-    attributes of the `Student` instance using the key/value pairs listed in `json`.
-    * The method assumes `json` is a dictionary containing attributes with
-    name/value corresponding to key/value.
+### 8. Class to JSON
 
-* **14. Pascal's Triangle**
-  * [14-pascal_triangle.py](./14-pascal_triangle.py): Python function that returns a list of lists of
-  integers representing Pascal's triangle of size `n`.
-  * Assumes the size parameter `n` is an integer.
-  * If `n` is less than or equal to `0`, returns an empty list.
+- Create a class `Base` with a class method `def to_json_string(list_dictionaries):` that returns the JSON string representation of a list of dictionaries.
+- The `to_json_string` method should accept a list of dictionaries and return their JSON string representation.
+- If the list of dictionaries is empty or `None`, return an empty list (`[]`) as the JSON representation.
 
-* **15. Search and update**
-  * [100-append_after.py](./100-append_after.py): Python function that inserts a line of text to a
-  file after each line containing a specified string.
+### 9. Student to JSON
 
-* **16. Log parsing**
-  * [101-stats.py](./101-stats.py): Python script that reads lines from standard input. After
-  every 10 lines or the input of a keyboard interruption (`CTRL + C`), computes the
-  following metrics:
-    * Total file size up that point: `File size: <total size>`
-    * Status code of each read line, printed in ascending order:
-    `<status code>: <number>`
-  * Input format: `<IP Address> - [<date>] "GET /projects/260 HTTP/1.1"
-  <status code> <file size>`
+- Create a class `Student` that has the following attributes:
+  - `first_name` (string)
+  - `last_name` (string)
+  - `age` (int)
+- Create an instance method `def to_json(self):` that returns a dictionary representation of a `Student` instance.
 
-* **17. Hack the VM**
-  * [read_write_heap.py](./read_write_heap.py): Python script that finds and replaces a string in the
-  heap of a running process.
-  * Usage: `read_write_heap.py pid search_string replace_string` where `pid` is
-  the process ID of the running process and strings are represented in ASCII.
-  * Only looks in the heap of the process.
-  * On a usage error, prints an error message to `stdout` and exits with the
-  status code `1`.
+### 10. Student to JSON with Filter
+
+- Enhance the `Student` class from task 9 by adding a filter to the `to_json` method.
+- The `to_json` method should accept an optional list of attributes names to include in the JSON representation. Only the attributes that are in the list should be included in the output dictionary.
+
+### 11. Student to Disk and Reload
+
+- Extend the `Student` class from task 10 by adding class methods for saving and loading `Student` instances to/from a JSON file.
+
+### 12. Pascal's Triangle
+
+- Prototype: `def pascal_triangle(n):`
+- Write a function that generates the first `n` rows of Pascal's Triangle as a list of lists.
+
+### 13. Search and Update
+
+- Create a class `MyInt` that inherits from `int`.
+- Add a method `def __new__(cls, value):` that overloads the `int` constructor to accept an additional parameter.
+
+### 14. Log Parsing
+
+- Write a script that reads from a log file and computes various statistics from the log data.
+
+Remember to include proper documentation and follow the PEP 8 code style guidelines for your code.
+
+Feel free to customize this README further to include any additional information specific to your project. Additionally, update the table of contents as you complete the tasks and add more sections to the README if needed.
+
+Good luck with your ALX Higher-Level Programming project on Python Input/Output!
