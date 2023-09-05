@@ -3,9 +3,11 @@
     <img src="file.jpg" alt="OOP Image" style="position: absolute; width: 100%; height: 100%; object-fit: cover;">
 </div>
 
+<div align="center">
 
 # Python Input/Output
 
+</div>
 
 This repository contains Python scripts and classes designed to cover various input/output operations and concepts in Python programming. The project is part of the ALX Higher-Level Programming curriculum, specifically under the section "Python Input/Output."
 
