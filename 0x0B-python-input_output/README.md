@@ -1,8 +1,8 @@
 
-
 <div style="width: 100%; height: 0; padding-bottom: 100%; position: relative;">
     <img src="file.jpg" alt="OOP Image" style="position: absolute; width: 100%; height: 100%; object-fit: cover;">
 </div>
+
 # ALX Higher-Level Programming - Python Input/Output
 
 This repository contains Python scripts and classes designed to cover various input/output operations and concepts in Python programming. The project is part of the ALX Higher-Level Programming curriculum, specifically under the section "Python Input/Output."
@@ -164,8 +164,5 @@ Prototypes for functions written in this project:
 ### 14. Log Parsing
 
 - Write a script that reads from a log file and computes various statistics from the log data.
-- The log file format consists of lines with the following structure: [<datetime>] <log_message>, where <datetime> is a
-  timestamp in the format YYYY-MM-DDTHH:MM:SS, and <log_message> is the actual log message.
-
-
-Good luck with your ALX Higher-Level Programming project on Python Input/Output!
+- The log file format consists of lines with the following structure: `[<datetime>]` `<log_message>`, where `<datetime>` is a
+  timestamp in the format YYYY-MM-DDTHH:MM:SS, and `<log_message>` is the actual log message.
