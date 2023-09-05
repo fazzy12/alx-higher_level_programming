@@ -164,9 +164,8 @@ Prototypes for functions written in this project:
 ### 14. Log Parsing
 
 - Write a script that reads from a log file and computes various statistics from the log data.
+- The log file format consists of lines with the following structure: [<datetime>] <log_message>, where <datetime> is a
+  timestamp in the format YYYY-MM-DDTHH:MM:SS, and <log_message> is the actual log message.
 
-Remember to include proper documentation and follow the PEP 8 code style guidelines for your code.
-
-Feel free to customize this README further to include any additional information specific to your project. Additionally, update the table of contents as you complete the tasks and add more sections to the README if needed.
 
 Good luck with your ALX Higher-Level Programming project on Python Input/Output!
