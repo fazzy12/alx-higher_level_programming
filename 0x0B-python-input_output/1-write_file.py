@@ -5,7 +5,4 @@
 def write_file(filename="", text=""):
     """Writes a string to a text file (UTF8) and returns the number of"""
     with open(filename, "w", encoding="utf=8") as file:
-        written_file = file.write(text)
-
-        for char_count in written_file:
-            return len(char_count)
+        return file.write(text)
