@@ -1,13 +1,7 @@
-1-write_file.pyon3
-# 1-number_of_lines.py
-# ifeanyi kalu
-"""Defines a text file line-counting function."""
+#!/usr/bin/python3
+"""Module for write_file method that writes a string to a text file"""
 
-
-def number_of_lines(filename=""):
-    """Return the number of lines in a text file."""
-    lines = 0
-    with open(filename) as f:
-        for line in f:
-            lines += 1
-    return lines
+def write_file(filename="", text=""):
+    """Writes a string to a text file (UTF8) and returns the number of"""
+    with open(filename, encoding="utf=8") as file:
+        file.write(text)
