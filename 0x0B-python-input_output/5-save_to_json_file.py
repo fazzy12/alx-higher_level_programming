@@ -1,10 +1,15 @@
 #!/usr/bin/python3
-# 5-to_json_string.py
-# ifeanyi kalu
-"""Defines a string-to-JSON function."""
+"""This module implements a function that writes an Object to a text file,
+using the standard encoding and decoding functions for encoding
+and decoding respectively
+"""
+
+
 import json
 
 
-def to_json_string(my_obj):
-    """Return the JSON representation of a string object."""
-    return json.dumps(my_obj)
+def save_to_json_file(my_obj, filename):
+    """Writes an Object to a text file, using a JSON representation"""
+
+    with open(filename, encoding="utf-8") as file:
+        json.dumps(my_obj, file, indent=4)
