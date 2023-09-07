@@ -1,17 +1,34 @@
 #!/usr/bin/python3
-# 9-add_item.py
-# ifeanyi kalu
-"""Add all arguments to a Python list and save them to a file."""
-import sys
+"""This module contains a class Student that defines a student"""
 
-if __name__ == "__main__":
-    save_to_json_file = __import__('7-save_to_json_file').save_to_json_file
-    load_from_json_file = \
-        __import__('8-load_from_json_file').load_from_json_file
 
-    try:
-        items = load_from_json_file("add_item.json")
-    except FileNotFoundError:
-        items = []
-    items.extend(sys.argv[1:])
-    save_to_json_file(items, "add_item.json")
+class Student():
+    """Defines a student with a first name, last name, and age"""
+
+    def __init__(self, first_name, last_name, age):
+        """Initializes a new student
+
+        Args:
+            first_name (str): the student's first name
+            last_name (str): the student's last name
+            age (int): the student's age
+
+        Returns:
+            None
+        """
+
+        self.first_name = first_name
+        self.last_name = last_name
+        self.age = age
+
+    def to_json(self):
+        """Retrieves a dictionary representation of a Student instance
+
+        Args:
+            None
+
+        Returns:
+            dict: the dictionary representation of a Student instance
+        """
+
+        return self.__dict__
