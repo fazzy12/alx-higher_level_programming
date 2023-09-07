@@ -1,24 +1,54 @@
 #!/usr/bin/python3
-# 11-student.py
-# ifeanyi kalu
-"""Defines a class Student."""
+"""This module contains a class Student that defines a student"""
 
 
 class Student:
-    """Represent a student."""
+    """Defines a student with a first name, last name, and age"""
 
     def __init__(self, first_name, last_name, age):
-        """Initialize a new Student.
+        """Initializes a new student
 
         Args:
-            first_name (str): The first name of the student.
-            last_name (str): The last name of the student.
-            age (int): The age of the student.
+            first_name (str): the student's first name
+            last_name (str): the student's last name
+            age (int): the student's age
+
+        Returns:
+            None
         """
         self.first_name = first_name
         self.last_name = last_name
         self.age = age
 
-    def to_json(self):
-        """Get a dictionary representation of the Student."""
-        return self.__dict__
+    def to_json(self, attrs=None):
+        """Retrieves a dictionary representation of a Student instance
+
+        Args:
+            attrs (list, optional): List of attribute names to retrieve.
+                If provided, only these attributes will be included
+                    in the dictionary.
+                If None, all attributes will be included.
+
+        Returns:
+            dict: The dictionary representation of a Student instance.
+        """
+        if attrs is None:
+            return self.__dict__
+        else:
+            return {
+                attr: getattr(self, attr)
+                for attr in attrs
+                if hasattr(self, attr)
+            }
+
+    def reload_from_json(self, json):
+        """Replaces all attributes of the Student instance with ones in json
+
+        Args:
+            json (dict): dictionary of attributes to replace in the instance
+
+        Returns:
+            None
+        """
+        for attr, value in json.items():
+            setattr(self, attr, value)
