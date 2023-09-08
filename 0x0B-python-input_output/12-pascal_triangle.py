@@ -6,10 +6,10 @@ representing the Pascal's Triangle of a given number of rows"""
 def pascal_triangle(n):
     """Returns a list of lists of integers representing the Pascal's Triangle
     of a given number of rows
-    
+
     Args:
         n (int): the number of rows of Pascal's Triangle to generate
-        
+
     Returns:
         list: a list of lists of integers representing the Pascal's Triangle
             of a given number of rows
