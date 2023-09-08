@@ -1,6 +1,4 @@
 #!/usr/bin/python3
-# 101-stats.py
-# ifeanyi kalu
 """Reads from standard input and computes metrics.
 
 After every ten lines or the input of a keyboard interruption (CTRL + C),
@@ -10,7 +8,7 @@ prints the following statistics:
 """
 
 
-def print_stats(size, status_codes):
+def print_logs(size, status_codes):
     """Print accumulated metrics.
 
     Args:
@@ -32,7 +30,7 @@ if __name__ == "__main__":
     try:
         for line in sys.stdin:
             if count == 10:
-                print_stats(size, status_codes)
+                print_logs(size, status_codes)
                 count = 1
             else:
                 count += 1
@@ -53,8 +51,8 @@ if __name__ == "__main__":
             except IndexError:
                 pass
 
-        print_stats(size, status_codes)
+        print_logs(size, status_codes)
 
     except KeyboardInterrupt:
-        print_stats(size, status_codes)
+        print_logs(size, status_codes)
         raise
