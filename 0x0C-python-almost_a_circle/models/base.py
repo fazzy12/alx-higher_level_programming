@@ -1,11 +1,11 @@
 #!/usr/bin/python3
-""" Base class for all other classes in this project  
+""" Base class for all other classes in this project
 """
 
 
 class Base:
-    """ Base class for all other classes in this project  
-    
+    """ Base class for all other classes in this project
+
     Attributes:
         __nb_objects (int): Number of objects created
     """
