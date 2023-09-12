@@ -4,20 +4,18 @@
 
 
 class Base:
-    """ Base class for all other classes in this project
+    """Base class for managing id attribute."""
 
-    Attributes:
-        __nb_objects (int): Number of objects created
-    """
     __nb_objects = 0
 
     def __init__(self, id=None):
-        """Initialize a new Base.
+        """Initialize a Base instance.
 
         Args:
-            id (int): The identity of the new Base.
+            id (int, optional): The id to assign to the instance.
+            Defaults to None.
         """
-        if id is None:
+        if id is not None:
             self.id = id
         else:
             Base.__nb_objects += 1
