@@ -91,9 +91,12 @@ class Rectangle(Base):
 
     # Public method to display the Rectangle using '#' character
     def display(self):
-        """Display the Rectangle using '#' character."""
+        """Display the Rectangle using '#' character,
+        considering x and y coordinates."""
+        for _ in range(self.__y):
+            print()
         for _ in range(self.__height):
-            print("#" * self.__width)
+            print(" " * self.__x + "#" * self.__width)
 
     # Override the __str__ method to return a custom string representation
     def __str__(self):
