@@ -98,5 +98,9 @@ class Rectangle(Base):
     # Override the __str__ method to return a custom string representation
     def __str__(self):
         """Return a custom string representation of the Rectangle."""
-        return f"[Rectangle] ({self.id}) {self.__x}/{self.__y} \
-            - {self.__width}/{self.__height}"
+        y = self.__y
+        x = self.__x
+        w = self.__width
+        h = self.__height
+        i = self.id
+        return f"[Rectangle] ({i}) {x}/{y} - {w}/{h}"
