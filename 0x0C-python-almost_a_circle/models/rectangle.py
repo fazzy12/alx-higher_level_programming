@@ -1,4 +1,5 @@
 #!/usr/bin/python3
+"""Rectangle class, inherits from Base."""
 
 from models.base import Base
 
