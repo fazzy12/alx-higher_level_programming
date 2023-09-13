@@ -108,17 +108,12 @@ class Rectangle(Base):
         i = self.id
         return f"[Rectangle] ({i}) {x}/{y} - {w}/{h}"
 
-    # Public method to update attributes using no-keyword arguments
-    def update(self, *args):
-        """Update attributes using no-keyword arguments
-        in order (id, width, height, x, y)."""
-        if len(args) >= 1:
-            self.id = args[0]
-        if len(args) >= 2:
-            self.width = args[1]
-        if len(args) >= 3:
-            self.height = args[2]
-        if len(args) >= 4:
-            self.x = args[3]
-        if len(args) >= 5:
-            self.y = args[4]
+    # Public method to update attributes using keyword arguments (**kwargs)
+    def update(self, *args, **kwargs):
+        """Update attributes using keyword arguments (**kwargs)."""
+        if args:
+            # If *args exists and is not empty, ignore **kwargs
+            return
+
+        for key, value in kwargs.items():
+            setattr(self, key, value)
