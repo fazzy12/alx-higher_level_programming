@@ -63,4 +63,4 @@ class Square(Rectangle):
         elif kwargs:
             # If **kwargs exists, assign attributes based on keys in **kwargs
             for key, value in kwargs.items():
-                setattr(self, key, value)   
+                setattr(self, key, value)
