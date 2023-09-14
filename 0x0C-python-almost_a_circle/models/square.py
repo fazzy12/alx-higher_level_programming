@@ -64,3 +64,13 @@ class Square(Rectangle):
             # If **kwargs exists, assign attributes based on keys in **kwargs
             for key, value in kwargs.items():
                 setattr(self, key, value)
+
+    # Public method to create and return a dictionary representation of the Square
+    def to_dictionary(self):
+        """Return a dictionary representation of the Square."""
+        return {
+            'id': self.id,
+            'size': self.size,
+            'x': self.x,
+            'y': self.y
+        }
