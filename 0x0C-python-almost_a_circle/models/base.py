@@ -70,3 +70,24 @@ class Base:
         if json_string is None or len(json_string) == 0:
             return []
         return json.loads(json_string)
+
+    @classmethod
+    def create(cls, **dictionary):
+        """Create an instance with attributes set from a dictionary.
+
+        Args:
+            **dictionary: A dictionary with attribute names and values.
+
+        Returns:
+            Base: An instance of the class with attributes set from the dictionary.
+        """
+        if cls.__name__ == "Rectangle":
+            dummy = cls(1, 1)  # Create a dummy Rectangle with mandatory attributes
+        elif cls.__name__ == "Square":
+            dummy = cls(1)  # Create a dummy Square with mandatory attributes
+        else:
+            raise ValueError("Unsupported class")
+
+        # Use the update method to assign attributes from the dictionary
+        dummy.update(**dictionary)
+        return dummy
