@@ -79,10 +79,12 @@ class Base:
             **dictionary: A dictionary with attribute names and values.
 
         Returns:
-            Base: An instance of the class with attributes set from the dictionary.
+            Base: An instance of the class with attributes set from
+            the dictionary.
         """
         if cls.__name__ == "Rectangle":
-            dummy = cls(1, 1)  # Create a dummy Rectangle with mandatory attributes
+            # Create a dummy Rectangle with mandatory attributes
+            dummy = cls(1, 1)
         elif cls.__name__ == "Square":
             dummy = cls(1)  # Create a dummy Square with mandatory attributes
         else:
