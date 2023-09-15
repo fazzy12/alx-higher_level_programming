@@ -2,6 +2,7 @@
 """ Base class for all other classes in this project
 """
 import json
+import csv
 
 
 class Base:
@@ -107,5 +108,54 @@ class Base:
                 json_string = file.read()
                 list_dicts = cls.from_json_string(json_string)
                 return [cls.create(**data) for data in list_dicts]
+        except FileNotFoundError:
+            return []
+
+    @classmethod
+    def save_to_file_csv(cls, list_objs):
+        """Serialize instances to CSV and write to a file.
+
+        Args:
+            list_objs (list): A list of instances to be serialized and saved.
+        """
+
+        objects = [obj.id, obj.width, obj.height, obj.x, obj.y]
+
+        file_name = cls.__name__ + ".csv"
+        with open(file_name, mode='w', newline='') as file:
+            writer = csv.writer(file)
+            if cls.__name__ == "Rectangle":
+                for obj in list_objs:
+                    writer.writerow(objects)
+            elif cls.__name__ == "Square":
+                for obj in list_objs:
+                    writer.writerow([obj.id, obj.size, obj.x, obj.y])
+
+    @classmethod
+    def load_from_file_csv(cls):
+        """Deserialize instances from a CSV file and return list of instances.
+
+        Returns:
+            list: A list of instances read from the CSV file.
+        """
+
+        update = obj.update(int(row[1]), int(row[2]), int(row[3]), int(row[4]))
+
+        file_name = cls.__name__ + ".csv"
+        try:
+            with open(file_name, mode='r', newline='') as file:
+                reader = csv.reader(file)
+                instances = []
+                if cls.__name__ == "Rectangle":
+                    for row in reader:
+                        obj = cls.create(id=int(row[0]))
+                        update
+                        instances.append(obj)
+                elif cls.__name__ == "Square":
+                    for row in reader:
+                        obj = cls.create(id=int(row[0]))
+                        obj.update(int(row[1]), int(row[2]), int(row[3]))
+                        instances.append(obj)
+                return instances
         except FileNotFoundError:
             return []
