@@ -138,9 +138,6 @@ class Base:
         Returns:
             list: A list of instances read from the CSV file.
         """
-
-        update = obj.update(int(row[1]), int(row[2]), int(row[3]), int(row[4]))
-
         file_name = cls.__name__ + ".csv"
         try:
             with open(file_name, mode='r', newline='') as file:
@@ -149,7 +146,7 @@ class Base:
                 if cls.__name__ == "Rectangle":
                     for row in reader:
                         obj = cls.create(id=int(row[0]))
-                        update
+                        obj.update(int(row[1]), int(row[2]), int(row[3]), int(row[4]))
                         instances.append(obj)
                 elif cls.__name__ == "Square":
                     for row in reader:
