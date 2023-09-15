@@ -130,7 +130,7 @@ class Base:
 
     @classmethod
     def load_from_file_csv(cls):
-        """Deserialize instances from a CSV file and return list of instances.
+        """Deserialize instances from a CSV file and return a list of instances.
 
         Returns:
             list: A list of instances read from the CSV file.
@@ -148,7 +148,7 @@ class Base:
                 elif cls.__name__ == "Square":
                     for row in reader:
                         obj = cls.create(id=int(row[0]))
-                        obj.update(int(row[1]), int(row[2]), int(row[3]))
+                        obj.update(size=int(row[1]), x=int(row[2]), y=int(row[3]))
                         instances.append(obj)
                 return instances
         except FileNotFoundError:
