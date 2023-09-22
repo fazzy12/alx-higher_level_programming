@@ -3,7 +3,7 @@
 ## introduction
 Welcome to the Higher-level Programming repository! This repository contains a collection of programs and projects completed during 
 the higher-level programming track at Holberton School. Throughout these projects, I've gained proficiency in Python, MySQL, and JavaScript. 
-Additionally, I continued to reinforce and expand my skills in C and shell scripting. Below is a list of the specific projects contained in this repository:
+Additionally, I continued to reinforce and expand my skills in C and shell scripting. Below is a list of the specific projects contained in this repository.
 
 
 
