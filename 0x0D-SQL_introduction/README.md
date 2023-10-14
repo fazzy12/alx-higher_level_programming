@@ -87,7 +87,7 @@ Make sure to follow the installation instructions for MySQL provided in the task
 1. Clone the repository:
 
    ```
-   git clone [https://github.com/fazzy12/alx-higher_level_programming/0x0D-SQL_introduction]
+   git clone https://github.com/fazzy12/alx-higher_level_programming/
    ```
 
 2. Navigate to the project directory:
