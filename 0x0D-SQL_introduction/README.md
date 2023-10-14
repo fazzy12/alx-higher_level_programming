@@ -1,4 +1,7 @@
-!["Logo Title Text 1"](rtcwz.jpg)
+<div style="width: 100%; height: 0; padding-bottom: 100%; position: relative;">
+    <img src="rtcwz.jpg" alt="OOP Image" style="position: absolute; width: 100%; height: 100%; object-fit: cover;">
+</div>
+
 
 # SQL Introduction Project
 
