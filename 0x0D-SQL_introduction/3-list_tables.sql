@@ -1,2 +1,2 @@
 -- 3. List tables
-SHOW TABLE(mysql);
+SHOW TABLES;
