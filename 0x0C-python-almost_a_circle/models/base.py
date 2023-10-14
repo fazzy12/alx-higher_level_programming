@@ -112,6 +112,7 @@ class Base:
             return []
 
     @classmethod
+
     def save_to_file_csv(cls, list_objs):
         """Serialize instances to CSV and write to a file.
 
@@ -153,3 +154,4 @@ class Base:
                 return instances
         except FileNotFoundError:
             return []
+
