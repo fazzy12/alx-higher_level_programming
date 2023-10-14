@@ -1,115 +1,189 @@
-# SQL - Introduction
+!["Logo Title Text 1"](rtcwz.jpg)
 
-This was my first project in which I began to work with SQL and relational
-databases. I began practicing introductory data definition and data
-manipulation language, making subqueries, and using functions.
+# SQL Introduction Project
 
-## Usage :dolphin:
+## Overview
 
-* Scripts [3-list_tables.sql](./3-list_tables.sql) forward take the database to query
-from as a MySQL command line argument.
+This repository contains SQL scripts for a project focused on SQL introduction and database management. The tasks cover foundational concepts in SQL, and each script addresses specific operations on a MySQL database.
 
-```
-$ cat 3-list_tables.sql | mysql -h localhost -u root -p mysql
-```
+## Table of Contents
 
-* Tasks 101-103 query from the database [temperatures.sql](./temperatures.sql).
+- [Prerequisites](#prerequisites)
+- [Project Structure](#project-structure)
+- [How to Use](#how-to-use)
+- [Task Descriptions](#task-descriptions)
+- [Author](#author)
+- [License](#license)
 
-## Tasks :page_with_curl:
+## Prerequisites
 
-* **0. List databases**
-  * [0-list_databases.sql](./0-list_databases.sql): MySQL script that lists all databases.
+To execute the SQL scripts, you need:
 
-* **1. Create a database**
-  * [1-create_database.sql](./1-create_database.sql): MySQL script that creates the database
-  `hbtn_0c_0`.
+- MySQL 8.0 installed
+- Ubuntu 20.04 LTS operating system
 
-* **2. Delete a database**
-  * [2-remove_databases.sql](./2-remove_databases.sql): MySQL script that deletes the database
-  `hbtn_0c_0`.
+### Installing MySQL on Ubuntu
 
-* **3. List tables**
-  * [3-list_tables.sql](./3-list_tables.sql): MySQL script that lists all tables.
+1. Update the package list:
 
-* **4. First table**
-  * [4-first_table.sql](./4-first_table.sql): MySQL script that creates a table `first_table`.
-  * Description:
-    * `id`: INT
-    * `name`: VARCHAR(256)
+   ```bash
+   sudo apt update
+   ```
 
-* **5. Full description**
-  * [5-full_table.sql](./5-full_table.sql): MySQL script that prints the full description of the
-  table `first_table`.
+2. Install MySQL Server:
 
-* **6. List all in table**
-  * [6-list_values.sql](./6-list_values.sql): MySQL script that lists all rows of the table
-  `first_table`.
+   ```bash
+   sudo apt install mysql-server
+   ```
 
-* **7. First add**
-  * [7-insert_value.sql](./7-insert_value.sql): MySQL script that inserts a new row in the table
-  `first_table`.
-  * Description:
-    * `id` = `89`
-    * `name` = `Holberton School`
+3. Check the installed version:
 
-* **8. Count 89**
-  * [8-count_89.sql](./8-count_89.sql): MySQL script that displays the number records with `id =
-  89` in the table `first_table`.
+   ```bash
+   mysql --version
+   ```
 
-* **9. Full creation**
-  * [9-full_creation.sql](./9-full_creation.sql): MySQL script that creates and fills a table
-  `second_table`.
-  * Description:
-    * `id`: INT
-    * `name`: VARCHAR(256)
-    * `score`: INT
-  * Records:
-    * `id` = 1, `name` = "John", `score` = 10
-    * `id` = 2, `name` = "Alex", `score` = 3
-    * `id` = 3, `name` = "Bob", `score` = 14
-    * `id` = 4, `name` = "George", `score` = 8
+### Connecting to MySQL Server
 
-* **10. List by best**
-  * [10-top_score.sql](./10-top_score.sql): MySQL script that lists the `score` and `name` of all
-  records of the table `second_table` in order of descending `score`.
+- Connect via terminal:
 
-* **11. Select the best**
-  * [11-best_score.sql](./11-best_score.sql): MySQL script that lists the `score` and `name` of all
-  records with a `score >= 10` in the table `second_table` in order of descending score.
+  ```bash
+  sudo mysql
+  ```
 
-* **12. Cheating is bad**
-  * [12-no_cheating.sql](./12-no_cheating.sql): MySQL script that updates the score of Bob to 10
-  the table `second_table`.
+- Connect via a MySQL client or use "container-on-demand" as specified in the tasks.
 
-* **13. Score too low**
-  * [13-change_class.sql](./13-change_class.sql): MySQL script that removes all records with a
-  `score <= 5` in the table `second_table`.
+Make sure to follow the installation instructions for MySQL provided in the tasks.
 
-* **14. Average**
-  * [14-average.sql](./14-average.sql): MySQL script that computes the average `score` of all
-  records in the table `second_table`.
+## Project Structure
 
-* **15. Number by score**
-  * [15-groups.sql](./15-groups.sql): MySQL script that lists the `score` and number of records
-  with the same score in the table `second_table` in order of descending count.
+- **`0x0D-SQL_introduction/`**: Main project directory.
+  - **`0-list_databases.sql`**: Script to list all databases.
+  - **`1-create_database_if_missing.sql`**: Script to create a database if it doesn't exist.
+  - **`2-remove_database.sql`**: Script to delete a database if it exists.
+  - **`3-list_tables.sql`**: Script to list all tables in a specified database.
+  - **`4-first_table.sql`**: Script to create a table named `first_table`.
+  - **`5-full_table.sql`**: Script to print the full description of the `first_table`.
+  - **`6-list_values.sql`**: Script to list all rows of `first_table`.
+  - **`7-insert_value.sql`**: Script to insert a new row in `first_table`.
+  - **`8-count_89.sql`**: Script to display the number of records with `id = 89` in `first_table`.
+  - **`9-full_creation.sql`**: Script to create a table named `second_table` and add multiple rows.
+  - **`10-top_score.sql`**: Script to list all records of `second_table` ordered by score.
+  - **`11-best_score.sql`**: Script to list records with a score >= 10 in `second_table`.
+  - **`12-no_cheating.sql`**: Script to update the score of Bob to 10 in `second_table`.
+  - **`13-change_class.sql`**: Script to remove records with a score <= 5 in `second_table`.
+  - **`14-average.sql`**: Script to compute the score average of all records in `second_table`.
+  - **`15-groups.sql`**: Script to list the number of records with the same score in `second_table`.
+  - **`16-no_link.sql`**: Script to list all records of `second_table` without rows without a name value.
+  - **`100-move_to_utf8.sql`**: Script to convert the database and tables to UTF8.
+  - **`101-avg_temperatures.sql`**: Script to display the average temperature by city.
+  - **`102-top_city.sql`**: Script to display the top 3 cities' temperatures during July and August.
+  - **`103-max_state.sql`**: Script to display the max temperature of each state.
 
-* **16. Say my name**
-  * [16-no_link.sql](./16-no_link.sql): MySQL script that lists the `score` and `name` of all
-  records in the table `second_table` in order of descending `score`.
-  * Does not display rows without a `name` value.
+## How to Use
 
-* **17. Go to UTF8**
-  * [100-move_to_utf8.sql](./100-move_to_utf8.sql): MySQL script that converts the `hbtn_0c_0`
-  database to UTF8.
+1. Clone the repository:
 
-* **18. Temperatures #0**
-  * [101-avg_temperatures.sql](./101-avg_temperatures.sql): MySQL script that displays the average
-  temperature (Fahrenheit) by city in descending order.
+   ```
+   git clone [https://github.com/fazzy12/alx-higher_level_programming/0x0D-SQL_introduction]
+   ```
 
-* **19. Temperatures #1**
-  * [102-top_city.sql](./102-top_city.sql): MySQL script that displays the three cities with the
-  highest average temperature from July to August in descending order.
+2. Navigate to the project directory:
 
-* **20. Temperature #2**
-  * [103-max_state.sql](./103-max_state.sql): MySQL script that displays the max temperature of each
-  state in order of state name.
+   ```
+   cd 0x0D-SQL_introduction
+   ```
+
+3. Execute the SQL scripts using the provided commands.
+
+## Task Descriptions
+
+1. **List Databases (`0-list_databases.sql`):**
+
+   - Lists all databases on the MySQL server.
+
+2. **Create Database If Missing (`1-create_database_if_missing.sql`):**
+
+   - Creates the `hbtn_0c_0` database if it doesn't exist.
+
+3. **Delete Database (`2-remove_database.sql`):**
+
+   - Deletes the `hbtn_0c_0` database if it exists.
+
+4. **List Tables (`3-list_tables.sql`):**
+
+   - Lists all tables in a specified database.
+
+5. **First Table (`4-first_table.sql`):**
+
+   - Creates a table named `first_table` with specified columns.
+
+6. **Full Table Description (`5-full_table.sql`):**
+
+   - Prints the full description of `first_table`.
+
+7. **List All Rows (`6-list_values.sql`):**
+
+   - Lists all rows of `first_table`.
+
+8. **Insert New Row (`7-insert_value.sql`):**
+
+   - Inserts a new row in `first_table`.
+
+9. **Count Records (`8-count_89.sql`):**
+
+   - Displays the number of records with `id = 89` in `first_table`.
+
+10. **Full Creation (`9-full_creation.sql`):**
+
+    - Creates a table named `second_table` and adds multiple rows.
+
+11. **Top Scores (`10-top_score.sql`):**
+
+    - Lists all records of `second_table` ordered by score.
+
+12. **Best Scores (`11-best_score.sql`):**
+
+    - Lists records with a score >= 10 in `second_table`.
+
+13. **No Cheating (`12-no_cheating.sql`):**
+
+    - Updates the score of Bob to 10 in `second_table`.
+
+14. **Remove Low Scores (`13-change_class.sql`):**
+
+    - Removes records with a score <= 5 in `second_table`.
+
+15. **Average Score (`14-average.sql`):**
+
+    - Computes the score average of all records in `second_table`.
+
+16. **Number by Score (`15-groups.sql`):**
+
+    - Lists the number of records with the same score in `second_table`.
+
+17. **No Link (`16-no_link.sql`):**
+
+    - Lists all records of `second_table` without rows without a name value.
+
+18. **Convert to UTF8 (`100-move_to_utf8.sql`):**
+
+    - Converts the database and tables to UTF8.
+
+19. **Average Temperatures (`101-avg_temperatures.sql`):**
+
+    - Displays the average temperature by city.
+
+20. **Top City Temperatures (`102-top_city.sql`):**
+
+    - Displays the top 3 cities' temperatures during July and August.
+
+21. **Max State Temperatures (`103-max_state.sql`):**
+    - Displays the max temperature of each state.
+
+## Author
+
+- [Ifeanyi Kalu](http://github.com/fazzy12)
+
+## License
+
+This project is licensed under the [License Name] - see the [LICENSE.md](LICENSE.md) file for details.
