@@ -1,5 +1,7 @@
 # Javascript - Warm up
 
+[![js-semistandard-style](https://raw.githubusercontent.com/standard/semistandard/master/badge.svg)](https://github.com/standard/semistandard)
+
 This was the first JavaScript project I completed at Holberton. Tasks involved
 writing various introductory-level JavaScript scripts on Node.js.
 
