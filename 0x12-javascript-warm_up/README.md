@@ -1,5 +1,10 @@
-# Javascript - Warm up
+<div style="width: 100%; height: 0; padding-bottom: 100%; position: relative;">
+    <img src="Javascript-535.png.jpeg" alt="OOP Image" style="position: absolute; width: 100%; height: 100%; object-fit: cover;">
+</div>
 
+
+
+# Javascript - Warm up
 [![js-semistandard-style](https://raw.githubusercontent.com/standard/semistandard/master/badge.svg)](https://github.com/standard/semistandard)
 
 This was the first JavaScript project I completed at Holberton. Tasks involved
