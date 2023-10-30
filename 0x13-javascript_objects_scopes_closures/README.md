@@ -1,3 +1,9 @@
+
+<div style="width: 100%; height: 0; padding-bottom: 100%; position: relative;">
+    <img src="Javascript-Object.jpg" alt="OOP Image" style="position: absolute; width: 100%; height: 100%; object-fit: cover;">
+</div>
+
+
 # JavaScript - Objects, Scopes and Closures
 
 In this second Holberton JavaScript project, I dived into the infamously fun aspects of the language - scope, closures, and `this`. I practiced working with objects and ES6-style classes.
