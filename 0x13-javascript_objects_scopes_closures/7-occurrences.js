@@ -1,4 +1,12 @@
 #!/usr/bin/node
+//  - printCharacters: prints the number of occurrences in a list.
+
 exports.nbOccurences = function (list, searchElement) {
-  return list.reduce((count, current) => current === searchElement ? count + 1 : count, 0);
+  let count = 0;
+  for (const element of list) {
+    if (element === searchElement) {
+      count++;
+    }
+  }
+  return count;
 };
