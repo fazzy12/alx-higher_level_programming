@@ -17,12 +17,13 @@ if __name__ == "__main__":
     cursor = db.cursor()
 
     # Execute the query to select states starting with 'N' and sort by id
-    cursor.execute("SELECT * FROM states WHERE name LIKE 'N%' ORDER BY id")
+    cursor.execute("SELECT * FROM states ORDER BY id")
 
     # Fetch and display the results
     results = cursor.fetchall()
     for row in results:
-        print(row)
+        if row == "N":
+            print(row)
 
     # Close the cursor and the database connection
     cursor.close()
