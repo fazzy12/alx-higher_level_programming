@@ -20,11 +20,8 @@ if __name__ == "__main__":
     cursor.execute("SELECT * FROM states ORDER BY id")
 
     # Fetch and display the results
-    results = cursor.fetchall()
-    if row == "N":
-        for row in results:
-            print(row)
+    [print(state) for state in cursor.fetchall() if state[1][0] == "N"]
 
-    # Close the cursor and the database connection
+    # close the cursor and the database connection
     cursor.close()
     db.close()
