@@ -24,7 +24,7 @@ if __name__ == "__main__":
     # Construct the SQL query with placeholders and execute it safely
     query = "SELECT * FROM `cities` as `c` INNER JOIN `states` as `s` ON `c`.`state_id` = `s`.`id` ORDER BY `c`.`id`"
     
-    cursor.execute(query, (state_name,))
+    cursor.execute(query)
 
     # Fetch and display the results
     result = cursor.fetchall()
