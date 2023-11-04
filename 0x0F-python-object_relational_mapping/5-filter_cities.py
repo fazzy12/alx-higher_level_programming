@@ -22,9 +22,8 @@ if __name__ == "__main__":
     cursor = db.cursor()
 
     # Construct the SQL query with placeholders and execute it safely
-    query = "SELECT GROUP_CONCAT(cities.name SEPARATOR ', ') FROM cities JOIN\
-        states ON cities.state_id = states.id\
-            WHERE states.name=%s ORDER BY cities.id"
+    query = "SELECT * FROM `cities` as `c` INNER JOIN `states` as `s` ON `c`.`state_id` = `s`.`id` ORDER BY `c`.`id`"
+    
     cursor.execute(query, (state_name,))
 
     # Fetch and display the results
