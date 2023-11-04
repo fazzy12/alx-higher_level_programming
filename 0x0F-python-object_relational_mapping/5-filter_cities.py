@@ -28,7 +28,7 @@ if __name__ == "__main__":
     cursor.execute(query, (state_name,))
 
     # Fetch and display the results
-    result = cursor.fetchone()
+    result = cursor.fetchall()
     if result:
         print(result[0])
 
