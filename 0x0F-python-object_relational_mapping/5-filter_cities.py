@@ -24,12 +24,7 @@ if __name__ == "__main__":
     # Construct the SQL query with placeholders and execute it safely
     query = "SELECT * FROM `cities` as `c` INNER JOIN `states` as `s` ON `c`.`state_id` = `s`.`id` ORDER BY `c`.`id`"
     
-    cursor.execute(query)
-
-    # Fetch and display the results
-    result = cursor.fetchall()
-    if result:
-        print(result[0])
+    print(", ".join([ct[2] for ct in c.fetchall() if ct[4] == sys.argv[4]]))
 
     # Close the cursor and the database connection
     cursor.close()
