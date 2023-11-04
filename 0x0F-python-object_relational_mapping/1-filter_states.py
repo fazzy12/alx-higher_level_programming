@@ -21,8 +21,8 @@ if __name__ == "__main__":
 
     # Fetch and display the results
     results = cursor.fetchall()
-    for row in results:
-        if row == "N":
+    if row == "N":
+        for row in results:
             print(row)
 
     # Close the cursor and the database connection
