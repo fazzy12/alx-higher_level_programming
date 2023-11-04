@@ -6,11 +6,6 @@ import sys
 import MySQLdb
 
 if __name__ == "__main__":
-    username = sys.argv[1]
-    password = sys.argv[2]
-    database = sys.argv[3]
-    state_name = sys.argv[4]
-
     # Connect to the MySQL server
     db = MySQLdb.connect(
         host="localhost",
@@ -18,7 +13,6 @@ if __name__ == "__main__":
         passwd=password,
         db=database
     )
-
     cursor = db.cursor()
 
     # Construct the SQL query with placeholders and execute it safely
