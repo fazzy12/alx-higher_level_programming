@@ -1,10 +1,8 @@
 #!/usr/bin/python3
 """ City class that defines the city table in MySQL """
 
-from model_state import Base
 from sqlalchemy import Column, Integer, String, ForeignKey
-from sqlalchemy.orm import relationship
-
+from relationship_state import Base
 
 class City(Base):
     """ City class for the city table """
