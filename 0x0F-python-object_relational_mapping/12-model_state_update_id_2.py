@@ -1,6 +1,7 @@
 #!/usr/bin/python3
 """
-This script changes the name of a State object with id 2 in the database hbtn_0e_6_usa.
+This script changes the name of a State object
+with id 2 in the database hbtn_0e_6_usa.
 """
 
 import sys
