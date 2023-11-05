@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-""" Script that creates the State “California” with the City “San Francisco” """
+""" Script that creates the State “California” with the City “San Francisco”"""
 
 from sqlalchemy import create_engine
 from sqlalchemy.orm import sessionmaker
@@ -9,7 +9,8 @@ import sys
 
 if __name__ == "__main__":
     username, password, db_name = sys.argv[1], sys.argv[2], sys.argv[3]
-    engine = create_engine(f'mysql+mysqldb://{username}:{password}@localhost:3306/{db_name}')
+    engine = create_engine(
+        f'mysql+mysqldb://{username}:{password}@localhost:3306/{db_name}')
 
     Base.metadata.create_all(engine)
     Session = sessionmaker(bind=engine)
