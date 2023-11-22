@@ -1,65 +1,68 @@
-# Python - Network #0
+# 0x10. Python - Network #0
 
-In this networking project, I used `curl` in Bash scripts to send various types
-of HTTP headers. In the process, I learned about how URL's work, domain names,
-the many different HTTP request/repsonse header fields and status codes, and
-how to utilize cookies.
+## Overview
 
-Task six was an algorithm challenge separate from the overall project theme
-completed in Python.
+This project explores network programming in Python, focusing on the fundamentals of HTTP, URL parsing, cURL commands, and Bash scripting for network-related tasks. The scripts included cover a range of topics such as making HTTP requests, handling responses, dealing with JSON data, and more.
 
-## Tests :heavy_check_mark:
+## Project Structure
 
-* [tests](./tests): Folder of test files. Provided by Holberton School.
+The project directory contains a set of Bash and Python scripts, each addressing specific network-related tasks. Here's an overview of the scripts:
 
-## Tasks :page_with_curl:
+1. **0-simple_get.sh**: Simple Bash script for making a GET request to a specified URL using cURL.
 
-NOTE: The `curl` behavior in all Bash scripts were written to interact with a
-server set up on a container provided by Holberton School.
+2. **1-post_params.sh**: Bash script for making a POST request with parameters to a specified URL using cURL.
 
-* **0. cURL body size**
-  [0-body_size.sh](./0-body_size.sh): Bash script that sends a `GET` request to
-  a given URL and displays the size of the response body in bytes.
+3. **2-get_data.sh**: Bash script for making a GET request to a URL and displaying the response body while handling errors.
 
-* **1. cURL to the end**
-  * [1-body.sh](./1-body.sh): Bash script that sends a `GET` request to a given
-  URL and displays the response body for a `200` status code response.
+4. **3-methods.sh**: Bash script for displaying the allowed HTTP methods for a given URL.
 
-* **2. cURL Method**
-  * [2-delete.sh](./2-delete.sh): Bash script that sends a `DELETE` request to
-  a given URL and displays the response body.
+5. **4-header.sh**: Bash script for making a GET request to a URL with a custom header and displaying the response body.
 
-* **3. cURL only methods**
-  * [3-methods.sh](./3-methods.sh): Bash script that displays all HTTP methods
-  the server of a given URL will accept.
+6. **5-post_params.sh**: Bash script for making a POST request with parameters to a URL using cURL.
 
-* **4. cURL headers**
-  * [4-header.sh](./4-header.sh): Bash script that sends a `GET` request to a
-  given URL with a header variable `X-HolbertonSchool-User-Id=98` and displays
-  the response body.
+7. **6-peak.py, 6-peak.txt**: Python script and accompanying text file for finding a peak in an unsorted list of integers with optimized complexity.
 
-* **5. cURL POST parameters**
-  * [5-post_params.sh](./5-post_params.sh): Bash script that sends a `POST`
-  request to a given URL with the variables `email=hr@holbertonschool.com` and
-  `subject=I will always be here for PLD` and displays the response body.
+8. **100-status_code.sh**: Bash script for making a request to a URL and displaying only the HTTP status code of the response.
 
-* **6. Find a peak**
-  * [6-peak.py](./6-peak.py): [Technical interview preparation] - Python
-  program that finds a peak in a list of unsorted integers.
-  * [6-peak.txt](./6-peak.txt): Text file containing the complexity of the
-  algorithm.
+9. **101-post_json.sh**: Bash script for sending a JSON POST request to a URL with validation of the JSON content.
 
-* **7. Only status code**
-  * [100-status_code.sh](./100-status_code.sh): Bash script that sends a `GET`
-  request to a given URL without using pipes, redirections, `;`, or `&&` and
-  displays the status code of the response.
+10. **102-catch_me.sh**: Bash script for making a request to a URL that triggers a specific server response.
 
-* **8. cURL a JSON file**
-  * [101-post_json.sh](./101-post_json.sh): Bash script that sends a JSON `POST`
-  request with the contents of a provided file to a given URL, and displays the
-  response body.
+## Requirements
 
-* **9. Catch me if you can!**
-  * [102-catch_me.sh](./102-catch_me.sh): Bash script that sends a request to
-  `0.0.0.0:5000/catch_me` that causes the server to respond with a message
-  containing `You got me!` in the repsonse body.
+- All Bash scripts should be exactly 3 lines long.
+- Scripts should be tested on Ubuntu 20.04 LTS.
+- Python scripts should adhere to PEP8 style guidelines.
+- Proper documentation using comments and docstrings in Python.
+
+## How to Use
+
+1. Clone the repository to your local machine:
+
+    ```bash
+    git clone https://github.com/your-username/0x10-python-network-0.git
+    ```
+
+2. Navigate to the project directory:
+
+    ```bash
+    cd 0x10-python-network-0
+    ```
+
+3. Run the desired script using the appropriate command, e.g.,
+
+    ```bash
+    ./0-simple_get.sh http://example.com
+    ```
+
+## Testing
+
+The scripts are designed to be tested in the provided sandbox environment, using the web server running on port 5000.
+
+## Contribution
+
+Contributions are welcome! Feel free to submit issues or pull requests.
+
+## License
+
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
