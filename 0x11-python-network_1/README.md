@@ -1,109 +1,80 @@
 # Python - Network #1
 
-This project involved learning how to use the `urllib` and `requests` Python
-libraries to send and receive HTTP messages to URL's. I practiced sending `GET`
-and `POST` requests, fetching JSON resources, and interacting with API's (the
-Star Wars API, GitHub API, and Twitter API).
+This repository contains Python scripts that demonstrate various network-related tasks 
+using the `requests` library. Each script focuses on different aspects of network programming, 
+including making HTTP requests, handling errors, and interacting with web APIs.
 
-## Tasks :page_with_curl:
+## Scripts
 
-* **0. What's my status? #0**
-  * [0-hbtn_status.py](./0-hbtn_status.py): Python script that fetches
-  `https://intranet.hbtn.io/status`.
-  * Uses `urllib`.
+1. **0-hbtn_status.py**
 
-* **1. Response header value #0**
-  * [1-hbtn_header.py](./1-hbtn_header.py): Python script that displays the
-  `X-Request-Id` response header variable of a request to a given URL.
-  * Usage: `./1-hbtn_header.py <URL>`
-	* Uses `urllib`.
+   - Fetches the status of a specified URL using the `urllib` library.
+   - Demonstrates how to use the `urlopen` function and handle the response.
 
-* **2. POST an email #0**
-  * [2-post_email.py](./2-post_email.py): Python script that sends a `POST`
-  request to a given URL with a given email, and displays the response body.
-  * Usage: `./2-post_email.py <URL> <email>`.
-	* Uses `urllib`.
+2. **1-hbtn_header.py**
 
-* **3. Error code #0**
-  * [3-error_code.py](./3-error_code.py): Python script sends a request to
-  a given URL and displays the response body.
-  * Handles HTTP errors.
-	* Uses `urllib`.
+   - Takes a URL as a command-line argument, sends a request, and displays the value of the `X-Request-Id` variable from the response header.
+   - Uses the `urllib` and `sys` libraries.
 
-* **4. What's my status? #1**
-  * [4-hbtn_status.py](./4-hbtn_status.py): Python script that fetches
-  `https://intranet.hbtn.io/status`.
-  * Uses `requests`.
+3. **2-post_email.py**
 
-* **5. Response header value #1**
-  * [5-hbtn_header.py](./5-hbtn_header.py): Python script that displays the
-  `X-Request-Id` response header variable of a request to a given URL.
-  * Usage: `./5-hbtn_header.py <URL>`
-	* Uses `requests`.
+   - Sends a POST request to a specified URL with an email as a parameter.
+   - Displays the body of the response.
+   - Utilizes the `urllib` and `sys` libraries.
 
-* **6. POST an email #1**
-  * [6-post_email.py](./6-post_email.py): Python script that sends a `POST`
-  request to a given URL with a given email, and displays the response body.
-  * Usage: `./6-post_email.py <URL> <email>`.
-	* Uses `requests`.
+4. **3-error_code.py**
 
-* **7. Error code #1**
-  * [7-error_code.py](./7-error_code.py): Python script sends a request to
-  a given URL and displays the response body.
-  * Handles HTTP errors.
-	* Uses `requests`.
+   - Takes a URL as a command-line argument, sends a request, and displays the body of the response.
+   - Handles `urllib.error.HTTPError` exceptions and prints the HTTP status code if it's greater than or equal to 400.
 
-* **8. Search API**
-  * [8-json_api.py](./8-json_api.py): Python script that sends a `POST` request
-  to `http://0.0.0.0:5000/search_user` with a letter passed as parameter.
-  * Usage: `./8-json_api.py <letter>`
-	* The letter is sent as the value of the variable `q`.
-	* If no letter is given, sets `q=""`.
-	* If the response body is properly formatted and non-empty, displays it as
-  `[<id>] <name>`.
-  * Uses `requests`.
+5. **4-hbtn_status.py**
 
-* **9. Star Wars API #0**
-  * [9-starwars.py](./9-starwars.py): Python script sends a search request to
-  the Star Wars API `people` endpoint with a given string.
-  * Usage: `./9-starwars.py <search string>`
-	* Displays the total number and `name` of each result.
-	* Uses `requests`.
+   - Fetches the status of a specified URL using the `requests` library.
+   - Demonstrates the simplicity of making HTTP requests with the `requests` library.
 
-* **10. My Github!**
-  * [10-my_github.py](./10-my_github.py): Python script that takes GitHub
-  credentials (username and password) and uses the Github API to display the
-  corresponding ID.
-  * Usage: `./10-my_github.py <username> <password>`
-	* Uses `requests`.
+6. **5-hbtn_header.py**
 
-* **11. Time for an interview!**
-  * [100-github_commits.py](./100-github_commits.py): Python script that lists
-  the 10 most recent comments of a given GitHub repository using the GitHub API.
-  * Usage: `./100-github_commits.py <repository name> <owner name>`
-	* Uses `requests`.
+   - Takes a URL as a command-line argument, sends a request, and displays the value of the `X-Request-Id` variable from the response header.
+   - Uses the `requests` and `sys` libraries.
 
-* **12. Star Wars API #1**
-  * [101-starwars.py](./101-starwars.py): Python script that sends a search
-  request to the Star Wars API `people` endpoint with a given string.
-  * Usage: `./101-starwars.py <search string>`
-	* Displays the total number and `name` of each result.
-	* Manages pagination to display all results.
-	* Uses `requests`.
+7. **6-post_email.py**
 
-* **13. Star Wars API #2**
-  * [102-starwars.py](./102-starwars.py): Python script that sends a search
-  request to the Star Wars API `people` endpoint with a given string.
-  * Usage: `./102-starwars.py <search string>`
-	* Displays the total number and `name` of each result as well as the list of
-  films associated with each character.
-	* Manages pagination to display all results.
-	* Uses `requests`.
+   - Sends a POST request to a specified URL with an email as a parameter using the `requests` library.
+   - Displays the body of the response.
 
-* **14. Twitter Auth**
-  * [103-search_twitter.py](./103-search_twitter.py): Python script that sends
-  a search request to the Twitter API `search` endpoint with a given string.
-  * Usage: `./103-search_twitter.py <consumer key> <consumer secret> <search string>`
-	* Displays the the top 5 results in the format
-  `[<Tweet ID>] <Tweet text> by <Tweet owner name>`.
-  * Uses `requests`.
+8. **7-error_code.py**
+
+   - Takes a URL as a command-line argument, sends a request, and displays the body of the response.
+   - Prints an error message if the HTTP status code is greater than or equal to 400.
+   - Uses the `requests` and `sys` libraries.
+
+9. **8-json_api.py**
+
+   - Takes a letter as a command-line argument, sends a POST request to a search API, and displays the results.
+   - Handles JSON formatting and displays the id and name if the response is valid.
+   - Uses the `requests` and `sys` libraries.
+
+10. **10-my_github.py**
+
+    - Takes GitHub credentials (username and personal access token) and uses the GitHub API to display the user's id.
+    - Demonstrates Basic Authentication with a personal access token.
+    - Uses the `requests` and `sys` libraries.
+
+11. **100-github_commits.py**
+
+    - Takes repository name and owner name as command-line arguments, and uses the GitHub API to list the 10 most recent commits.
+    - Prints commit information including SHA and author name.
+    - Uses the `requests` and `sys` libraries.
+
+## How to Run
+
+To run these scripts, ensure you have Python installed on your machine. Execute each script by running the command `./script_name.py` in your terminal, providing any necessary command-line arguments.
+
+Example:
+
+```bash
+./0-hbtn_status.py
+```
+
+#### Note
+Be mindful of rate limits for unauthenticated requests, especially when using the GitHub API.
