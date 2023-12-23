@@ -3,8 +3,8 @@
 const request = require('request');
 const fs = require('fs');
 
-const url = process.argv[2];
-const filePath = process.argv[3];
+const url = process.argv[2]; // The first argument is the URL
+const filePath = process.argv[3]; // The second argument is the file path
 
 request.get(url, (error, response, body) => {
   if (error) {
