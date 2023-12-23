@@ -1,6 +1,6 @@
-#!/usr/bin/mode
+#!/usr/bin/node
 
-const request = require('request');
+const request = require("request");
 
 const url = process.argv[2];
 
@@ -18,7 +18,7 @@ request.get(url, (error, response, body) => {
   const todos = JSON.parse(body);
   const completedTasks = {};
 
-  todos.forEach(todo => {
+  todos.forEach((todo) => {
     if (todo.completed) {
       if (!completedTasks[todo.userId]) {
         completedTasks[todo.userId] = 1;
