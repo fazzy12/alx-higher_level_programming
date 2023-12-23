@@ -1,62 +1,54 @@
-# 0x14. Javascript - Web scraping
+# JavaScript - Web scraping
 
-This project involved practicing file I/O on Node.js and using the NPM request
-framework to interact with the [Star Wars](https://swapi.co/),
-[JSONplaceholder](https://jsonplaceholder.typicode.com), and
-[Twitter](https://developer.twitter.com/en/docs/api-reference-index) API's.
+## Overview
+This project focuses on JavaScript programming, specifically web scraping. Through a series of tasks, you'll get hands-on experience with manipulating JSON data, working with the request module, and utilizing APIs, especially the Star Wars API.
 
-## Tasks :page_with_curl:
+## Learning Objectives
+- Understand why JavaScript programming is exceptional.
+- Gain proficiency in manipulating JSON data.
+- Familiarize yourself with the request and fetch API.
+- Learn how to read and write files using the fs module.
 
-* **0. Readme**
-  * [0-readme.js](./0-readme.js): JavaScript script that reads and prints the
-  contents of a file.
-  * Usage: `./0-readme.js <file path>`.
+## Prerequisites
+**Node.js**: Ensure you have Node 14.x installed. If not, you can install it using the provided commands.
 
-* **1. Write me**
-  * [1-writeme.js](./1-writeme.js): JavaScript script that writes a string to a
-  file.
-  * Usage: `./1-writeme.js <file path> <string to write>`.
+```
+curl -sL https://deb.nodesource.com/setup_14.x | sudo -E bash -
+sudo apt-get install -y nodejs
+```
+**Semi-Standard**: To ensure code consistency, the semi-standard coding style is recommended. Install it globally with:
+```
+sudo npm install semistandard --global
+```
+**Request Module**: This module simplifies making HTTP requests and is used extensively in the tasks.
 
-* **2. Status code**
-  * [2-statuscode.js](./2-statuscode.js): JavaScript script that displays the
-  stauts code of a `GET` request using the `request` framework.
-  * Usage: `./2-statuscode.js <URL to GET>`.
-  * Output: `code: <status code>`.
+```
+sudo npm install request --global
+export NODE_PATH=/usr/lib/node_modules
+```
+## Setup and Usage
+1. Clone the repository:
 
-* **3. Star wars movie title**
-  * [3-starwars_title.js](./3-starwars_title.js): JavaScript script that uses the
-  Star Wars API to print the title of the Star Wars movie with a given integer episode
-  number.
-  * Usage: `./3-starwars_title.js <3-starwars_title.js>`.
+```
+git clone [repository-url]
+cd 0x14-javascript-web_scraping
+```
+2. Navigate to the respective directory of each task and execute the script as demonstrated in the task descriptions.
 
-* **4. Star wars Wedge Antilles**
-  * [4-starwars_count.js](./4-starwars_count.js): JavaScript script that uses the
-  Star Wars API to print the number of movies featuring the character "Wedge Antilles".
-  * Usage: `./4-starwars_count.js http://swapi.co/api/films/`.
+## Tasks Overview
+0. **0-readme.js**: Reads and prints the content of a file.
+1. **1-writeme.js**: Writes a given string to a file.
+2. **2-statuscode.js**: Displays the status code of a GET request.
+3. **3-starwars_title.js**: Prints the title of a Star Wars movie based on its ID.
+4. **4-starwars_count.js**: Determines the number of movies a specific Star Wars character appears in.
+5. **5-request_store.js**: Retrieves content from a webpage and stores it in a file.
+6. **6-completed_tasks.js**: Calculates the number of tasks completed by a user.
+7. **100-starwars_characters.js**: Lists all characters from a Star Wars movie.
+8. **101-starwars_characters.js**: Lists characters in the order they appear in the movie.
 
-* **5. Loripsum**
-  * [5-request_store.js](./5-request_store.js): JavaScript script that stores the
-  contents of a webpage in a file.
-  * Usage: `./5-request_store.js <URL to get> <file path to store content in>`.
+## Notes
+- Ensure that all JavaScript files are executable.
+- All scripts must adhere to the provided guidelines regarding file headers and coding standards.
+- Always check the README of each task directory for specific instructions or notes.
 
-* **6. How many completed?**
-  * [6-completed_tasks.js](./6-completed_tasks.js): JavaScript script that uses the
-  JSONPlaceholder API to compute the number of tasks completed per user ID.
-  * Usage: `./6-completed_tasks.js https://jsonplaceholder.typicode.com/todos`.
-
-* **7. Who was playing in this movie?**
-  * [100-starwars_characters.js](./100-starwars_characters.js): JavaScript script
-  that uses the Star Wars API to print all characters featured in a given movie.
-  * Usage: `./100-starwars_characters.js <movie ID>`.
-
-* **8. Right order**
-  * [101-starwars_characters.js](./101-starwars_characters.js): JavaScript script
-  that uses the Star Wars API to print all characters featured in a given movie in
-  the same order as they are listed in the `characters` list of the `/films/` response.
-  * Usage: `./101-starwars_characters.js <movie ID>`.
-
-* **9. Twitter Auth**
-  * [102-search_twitter.js](./102-search_twitter.js): JavaScript script that sends
-  a search request to the Twitter API with a given search string.
-  * Usage: `./102-search_twitter.js <consumer  key> <consumer secret> <search string>.
-  * Outputs 5 results in the format `[<Tweet ID>] <Tweet text> by <Tweet owner name>`.
+**Copyright © 2023 ALX, All rights reserved**.
